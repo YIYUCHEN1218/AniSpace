@@ -16,8 +16,7 @@ const AllAnimePage = () => {
     planToWatchList, 
     handleSaveReview, 
     handlePlanToWatchToggle,
-    isScraping,
-    scrapeProgress
+    isScraping
   } = useAnime();
 
   const [selectedYear, setSelectedYear] = useState<string>('');
@@ -84,6 +83,19 @@ const AllAnimePage = () => {
     setIsModalOpen(true);
   };
 
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to the top of the filter bar so the search box is visible
+    const filterElement = document.querySelector('.filter-bar-container');
+    if (filterElement) {
+      const yOffset = -100; // Increased offset to see the full filter bar
+      const y = filterElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <FilterBar
@@ -130,7 +142,7 @@ const AllAnimePage = () => {
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            onPageChange={setCurrentPage}
+            onPageChange={handlePageChange}
           />
         </div>
       )}

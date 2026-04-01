@@ -43,6 +43,18 @@ const WatchedPage = () => {
     setIsModalOpen(true);
   }
 
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const headerElement = document.querySelector('.page-header');
+    if (headerElement) {
+      const yOffset = -100; // Increased offset to see the full header/search box
+      const y = headerElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     setCurrentPage(1);
   }, [filteredData.length, sortBy]);
@@ -99,7 +111,7 @@ const WatchedPage = () => {
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            onPageChange={setCurrentPage}
+            onPageChange={handlePageChange}
           />
         </>
       )}

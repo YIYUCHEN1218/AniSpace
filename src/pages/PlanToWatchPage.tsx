@@ -12,7 +12,7 @@ const PlanToWatchPage = () => {
     watchedList, 
     planToWatchList, 
     handleSaveReview, 
-    handlePlanToWatchToggle 
+    handlePlanToWatchToggle
   } = useAnime();
 
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -36,6 +36,18 @@ const PlanToWatchPage = () => {
     const existingWatched = watchedList.find(w => w.id === anime.id);
     setSelectedAnime(existingWatched || anime);
     setIsModalOpen(true);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const headerElement = document.querySelector('.page-header');
+    if (headerElement) {
+      const yOffset = -20;
+      const y = headerElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   useEffect(() => {
@@ -84,7 +96,7 @@ const PlanToWatchPage = () => {
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
-            onPageChange={setCurrentPage}
+            onPageChange={handlePageChange}
           />
         </>
       )}
