@@ -4,18 +4,20 @@ import type { Anime } from '../types';
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 const SEASONS = ['WINTER', 'SPRING', 'SUMMER', 'FALL'];
-const START_YEAR = 2024;
+const START_YEAR = 2024; // You can change this to 2000 for full scrape
 const END_YEAR = 2025;
 
-// Genre map for translation
+// Genre map for translation (Deleted Ecchi > 紳士, mapped Hentai > 紳士)
 const genreMap: Record<string, string> = {
   'Action': '動作', 'Adventure': '冒險', 'Comedy': '喜劇', 'Drama': '劇情',
   'Fantasy': '奇幻', 'Horror': '恐怖', 'Mystery': '懸疑', 'Romance': '愛情',
   'Sci-Fi': '科幻', 'Slice of Life': '日常', 'Sports': '運動', 'Supernatural': '超自然',
   'Suspense': '懸疑', 'Award Winning': '獲獎', 'Avant Garde': '前衛', 'Boys Love': '耽美',
   'Girls Love': '百合', 'Gourmet': '美食', 'Mecha': '機甲', 'Music': '音樂', 'Psychological': '心理',
-  'Thriller': '驚悚', 'Mahou Shoujo': '魔法少女', 'Ecchi': '紳士', 'Hentai': '紳士'
+  'Thriller': '驚悚', 'Mahou Shoujo': '魔法少女', 'Hentai': '紳士'
 };
+
+const WAIT_BETWEEN_REQUESTS = 100; // General speed up
 
 async function fetchAniListBySeason(year: number, season: string) {
   const query = `
@@ -25,7 +27,8 @@ async function fetchAniListBySeason(year: number, season: string) {
           id
           title { romaji english native }
           genres
-          coverImage { large }
+          tags { name rank }
+          coverImage { large extraLarge }
         }
       }
     }
@@ -40,60 +43,75 @@ async function fetchAniListBySeason(year: number, season: string) {
   return json.data.Page.media || [];
 }
 
-async function getWikipediaTranslation(nativeTitle: string): Promise<string> {
+// 強勢維基百科搜尋 (藉由搜尋日本標題，獲取官方中文版 redirect)
+async function getWikipediaTaiwanTranslation(nativeTitle: string): Promise<string> {
   try {
-    const url = `https://zh.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(nativeTitle)}&prop=langlinks&lllang=zh-tw&format=json&origin=*`;
-    const res = await fetch(url);
-    if (!res.ok) return "";
-    const json = await res.json();
-    const pages = json.query?.pages;
-    if (!pages) return "";
-    
-    // Extract translation from the first page object found
-    for (const pageId in pages) {
-      const page = pages[pageId];
-      if (page.langlinks && page.langlinks.length > 0) {
-        return page.langlinks[0]['*'];
+    // 1. Search for closest article
+    const searchUrl = `https://zh.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(nativeTitle)}&utf8=&format=json&origin=*`;
+    const searchRes = await fetch(searchUrl);
+    if (!searchRes.ok) return "";
+    const searchJson = await searchRes.json();
+    if (searchJson.query?.search && searchJson.query.search.length > 0) {
+      const matchTitle = searchJson.query.search[0].title;
+      
+      // 2. Fetch the zh-tw variant of that exact article
+      const url = `https://zh.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(matchTitle)}&redirects=1&format=json&variant=zh-tw&origin=*`;
+      const res = await fetch(url);
+      const json = await res.json();
+      const pages = json.query?.pages;
+      if (pages) {
+        for (const p in pages) {
+          if (pages[p].title) return pages[p].title;
+        }
       }
+      return matchTitle;
     }
-  } catch (e) {
-    // Ignore Wikipedia failures
-  }
+  } catch (e) {}
   return "";
 }
 
-async function getBangumiTranslation(nativeTitle: string): Promise<string> {
+async function getBangumiDataInfo(nativeTitle: string): Promise<{ title: string; image: string }> {
   try {
     const url = `https://api.bgm.tv/search/subject/${encodeURIComponent(nativeTitle)}?type=2&responseGroup=small`;
     const res = await fetch(url);
-    if (!res.ok) return "";
+    if (!res.ok) return { title: "", image: "" };
     const json = await res.json();
     if (json && json.list && json.list.length > 0) {
-      return json.list[0].name_cn || json.list[0].name || "";
+      const item = json.list[0];
+      return { 
+        title: item.name_cn || item.name || "",
+        image: item.images?.large || item.images?.common || ""
+      };
     }
-  } catch (e) {
-    // Ignore Bangumi API failures
-  }
+  } catch (e) {}
+  return { title: "", image: "" };
+}
+
+// Jikan API Age rating checks
+async function getJikanAgeRating(title: string): Promise<string> {
+  try {
+    const res = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(title)}&limit=1`);
+    if (!res.ok) return "";
+    const json = await res.json();
+    if (json && json.data && json.data.length > 0) {
+      return json.data[0].rating || "";
+    }
+  } catch(e) {}
   return "";
 }
 
 export async function scrapeAnimeData(onProgress?: (msg: string) => void): Promise<Anime[]> {
   let allAnime: Anime[] = [];
   
-  // 1. Initialize OpenCC (cn to tw fallback)
   const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
   if (onProgress) onProgress('正在準備翻譯引擎與字典檔...');
 
-  // 2. Fetch bangumi-data static JSON for fast translation
   let bgmData: any = { items: [] };
   try {
     const res = await fetch("https://raw.githubusercontent.com/bangumi-data/bangumi-data/master/dist/data.json");
     if (res.ok) bgmData = await res.json();
-  } catch(e) {
-    if (onProgress) onProgress('無法取得 bangumi-data 辭典，將依賴活體 API 翻譯...');
-  }
+  } catch(e) {}
 
-  // 3. Process each year and season via AniList
   for (let year = START_YEAR; year <= END_YEAR; year++) {
     for (const season of SEASONS) {
       if (onProgress) onProgress(`🔍 正在爬取 AniList: ${year} 年 ${season} 季...`);
@@ -105,61 +123,81 @@ export async function scrapeAnimeData(onProgress?: (msg: string) => void): Promi
           const item = seasonData[i];
           const nativeTitle = item.title.native || item.title.romaji;
           
-          if (onProgress) onProgress(`正在翻譯 (${allAnime.length}): ${nativeTitle}`);
+          if (onProgress) onProgress(`翻譯與分級審查 (${allAnime.length}): ${nativeTitle}`);
           
           let titleZh = "";
+          let finalCover = "";
+          let fromBgmData = false;
           
-          // Phase 1: Fast static dump check
           if (bgmData.items.length > 0) {
              const bgmItem = bgmData.items.find((bgm: any) => bgm.title === nativeTitle || (bgm.titleTranslate && Object.values(bgm.titleTranslate).flat().includes(nativeTitle)));
              if (bgmItem && bgmItem.titleTranslate) {
                 if (bgmItem.titleTranslate['zh-Hant']) {
                   titleZh = bgmItem.titleTranslate['zh-Hant'][0];
+                  fromBgmData = true; // High confidence official Taiwan title
                 } else if (bgmItem.titleTranslate['zh-Hans']) {
-                  titleZh = converter(bgmItem.titleTranslate['zh-Hans'][0]);
+                  titleZh = bgmItem.titleTranslate['zh-Hans'][0];
                 }
              }
           }
           
-          // Phase 2: User requested web crawling (Wikipedia CORS search)
-          if (!titleZh) {
-             titleZh = await getWikipediaTranslation(nativeTitle);
-             // We can safely await a bit to not overwhelm the API
-             if (titleZh) await sleep(200); 
+          // 若有需要，從 Bangumi API 取得封面與備用翻譯
+          const bgmInfo = await getBangumiDataInfo(nativeTitle);
+          // 強制將 Bangumi 圖片網址改為大圖 (/l/) 解決模糊問題
+          if (bgmInfo.image) {
+             finalCover = bgmInfo.image.replace(/\/c\/|\/m\/|\/s\//g, '/l/');
+          } else {
+             finalCover = item.coverImage?.extraLarge || item.coverImage?.large || "";
           }
           
-          // Phase 3: Project Rules primary data (Bangumi Live API)
-          if (!titleZh) {
-             titleZh = await getBangumiTranslation(nativeTitle);
-             if (titleZh) {
-               titleZh = converter(titleZh); // Bangumi often gives simplified
-               await sleep(500); 
+          if (!titleZh && bgmInfo.title) {
+             titleZh = bgmInfo.title;
+          }
+          await sleep(WAIT_BETWEEN_REQUESTS); 
+          
+          // Phase 2: 如果沒有自信的繁體名字 (fromBgmData)，透過維基百科搜尋引擎直接提取 zh-tw 官方名稱
+          if (!fromBgmData) {
+             const wikiTitle = await getWikipediaTaiwanTranslation(nativeTitle);
+             if (wikiTitle && wikiTitle !== nativeTitle) {
+               titleZh = wikiTitle;
+               fromBgmData = true; // Wiki is usually very good
              }
+             await sleep(WAIT_BETWEEN_REQUESTS); 
           }
           
-          // Phase 4: Fallback to Kaniji conversion
+          // Phase 3: 最後防線，純粹使用 OpenCC 將簡體轉繁體
           if (!titleZh) {
-             titleZh = converter(item.title.native || item.title.romaji || item.title.english || "未知動畫");
+             titleZh = item.title.native || item.title.romaji || item.title.english || "未知動畫";
           }
           
-          // Formatting
+          titleZh = converter(titleZh);
+          
+          // Phase 4: 高效紳士分級判定 (僅在 AniList 通報有疑慮時，才呼叫 Jikan API 避免拖慢全體速度)
+          let genres = (item.genres || []).map((g: string) => genreMap[g] || g);
+          const needsAgeCheck = item.genres?.includes('Ecchi') || item.genres?.includes('Hentai') || item.tags?.some((t:any) => t.name === 'Nudity' || t.name === 'Explicit');
+          
+          if (needsAgeCheck) {
+             const ageRating = await getJikanAgeRating(item.title.romaji || nativeTitle || item.title.english || '');
+             if (ageRating.includes('R+') || ageRating.includes('Rx')) {
+                if (!genres.includes('紳士')) genres.push('紳士');
+             }
+             await sleep(350); // Respect Jikan Rate limit
+          }
+          
           const id = `anilist-${item.id}`;
           const seasonMap: Record<string, string> = { 'WINTER': '冬', 'SPRING': '春', 'SUMMER': '夏', 'FALL': '秋' };
           const yearSeason = `${year} ${seasonMap[season]}`;
-          const genres = (item.genres || []).map((g: string) => genreMap[g] || g);
           
           allAnime.push({
             id,
             titleZh,
-            coverImage: item.coverImage?.large || "",
+            coverImage: finalCover,
             yearSeason,
             genres
           });
         }
         
-        await sleep(500); // delay between seasons
       } catch(e) {
-        if (onProgress) onProgress(`抓取 ${year} ${season} 發生錯誤，跳過。`);
       }
     }
   }
