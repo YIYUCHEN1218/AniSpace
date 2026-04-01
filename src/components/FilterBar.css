@@ -84,6 +84,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
   min-width: 140px;
+  max-width: 140px;
   height: 40px;
   border-radius: 8px;
   appearance: none;
@@ -93,20 +94,47 @@
   background-position: right 12px center;
   background-size: 16px;
   padding: 0 var(--spacing-8) 0 var(--spacing-3);
-}
-
-.filter-select:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.filter-select:focus {
-  border-color: var(--primary-color);
-  outline: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .filter-select option {
   background: var(--bg-secondary);
   color: var(--text-primary);
+}
+
+/* Quick Tabs */
+.quick-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quick-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.quick-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.quick-tab.active {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 /* 18+ Toggle button */
@@ -134,7 +162,6 @@
   background: #ff3333;
   color: white;
   border-color: #ff3333;
-  box-shadow: 0 4px 15px rgba(255, 50, 50, 0.4);
 }
 
 /* Genres Section */
@@ -174,7 +201,7 @@
   border-radius: 20px;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s;
 }
 
 .genre-tag:hover {
@@ -183,33 +210,8 @@
 }
 
 .genre-tag.active {
-  background: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-  box-shadow: 0 4px 10px rgba(100, 108, 255, 0.3);
-  font-weight: 500;
-}
-
-.quick-filters {
-  display: flex;
-  gap: 0.5rem;
-  margin-left: 0.5rem;
-}
-
-.quick-btn {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-
-.quick-btn:hover {
-  background: var(--accent-color);
+  background: var(--primary-gradient);
   color: white;
   border-color: transparent;
+  box-shadow: 0 4px 10px rgba(100, 108, 255, 0.3);
 }

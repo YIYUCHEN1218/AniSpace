@@ -1,6 +1,7 @@
 import React from 'react';
 import './FilterBar.css';
 import { Search, SlidersHorizontal, ArrowDownAZ, AlertTriangle } from 'lucide-react';
+import { getRelativeSeasonString } from '../utils/season';
 
 interface FilterBarProps {
   years: string[];
@@ -15,17 +16,6 @@ interface FilterBarProps {
   onSearchChange: (query: string) => void;
   onSortChange: (sort: string) => void;
   on18PlusChange: (show: boolean) => void;
-}
-
-function getRelativeSeasonString(offset: number) {
-  const date = new Date();
-  let year = date.getFullYear();
-  let currentSeasonIndex = Math.floor(date.getMonth() / 3);
-  let newIndex = currentSeasonIndex + offset;
-  while (newIndex > 3) { newIndex -= 4; year++; }
-  while (newIndex < 0) { newIndex += 4; year--; }
-  const seasonZh = ['冬', '春', '夏', '秋'][newIndex];
-  return `${year} ${seasonZh}`;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
@@ -50,6 +40,21 @@ const FilterBar: React.FC<FilterBarProps> = ({
     }
   };
 
+  const prevSeason = getRelativeSeasonString(-1);
+  const currentSeason = getRelativeSeasonString(0);
+
+  const handleYearSelect = (year: string) => {
+    onYearChange(year);
+  };
+
+  const handleSeasonToggle = (target: string) => {
+    if (selectedYear === target) {
+      onYearChange(''); // Un-toggle
+    } else {
+      onYearChange(target);
+    }
+  };
+
   return (
     <div className="filter-bar-container">
       <div className="filter-section glass-panel fade-in">
@@ -68,8 +73,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <div className="filter-group">
             <SlidersHorizontal size={18} className="filter-icon" />
             <select 
-              value={selectedYear} 
-              onChange={(e) => onYearChange(e.target.value)}
+              value={years.includes(selectedYear) ? selectedYear : ""} 
+              onChange={(e) => handleYearSelect(e.target.value)}
               className="filter-select"
             >
               <option value="">所有年份</option>
@@ -77,10 +82,19 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 <option key={year} value={year}>{year}</option>
               ))}
             </select>
-            <div className="quick-filters">
-              <button className="quick-btn" onClick={() => onYearChange(getRelativeSeasonString(-1))}>上季動畫</button>
-              <button className="quick-btn" onClick={() => onYearChange(getRelativeSeasonString(0))}>本季新番</button>
-              <button className="quick-btn" onClick={() => onYearChange(getRelativeSeasonString(1))}>下季新番</button>
+            <div className="quick-tabs">
+              <button 
+                className={`quick-tab ${selectedYear === prevSeason ? 'active' : ''}`} 
+                onClick={() => handleSeasonToggle(prevSeason)}
+              >
+                上季動畫
+              </button>
+              <button 
+                className={`quick-tab ${selectedYear === currentSeason ? 'active' : ''}`} 
+                onClick={() => handleSeasonToggle(currentSeason)}
+              >
+                本季新番
+              </button>
             </div>
           </div>
 
@@ -127,7 +141,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
               {genre}
             </button>
           ))}
-          {/* Show NSFW tag when 18+ is active */}
           {show18Plus && (
             <button
               className={`genre-tag ${selectedGenres.includes('紳士') ? 'active' : ''}`}
