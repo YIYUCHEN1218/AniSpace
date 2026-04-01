@@ -69,3 +69,117 @@
   border-radius: 4px;
   font-family: monospace;
 }
+
+/* ─── Scrape Modal ─────────────────────────────────────── */
+.scrape-modal {
+  max-width: 460px;
+  width: 90vw;
+  padding: var(--spacing-8);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.scrape-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.scrape-modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scrape-modal-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.scrape-modal-divider {
+  height: 1px;
+  background: var(--border-glass);
+  margin: 0 calc(-1 * var(--spacing-8));
+}
+
+.scrape-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.scrape-field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.scrape-select {
+  appearance: none;
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-glass-light);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.scrape-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.scrape-select option {
+  background: #1a1a2e;
+  color: #ffffff;
+}
+
+.season-chips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2);
+}
+
+.season-chip {
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.season-chip:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-glass-light);
+  color: var(--text-primary);
+}
+
+.season-chip.active {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.scrape-modal-actions {
+  display: flex;
+  gap: var(--spacing-3);
+  justify-content: flex-end;
+  padding-top: var(--spacing-2);
+}
