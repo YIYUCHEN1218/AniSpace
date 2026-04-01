@@ -75,8 +75,12 @@ async function getJikanAgeRating(title: string, retries = 3, delay = 1000): Prom
 
 /**
  * 每次只爬取單一特定年份與季度的資料，避免冗長過度負載。
+ * Season 可以傳入 'ALL' 來抓取四個季度。
  */
 export async function scrapeAnimeData(year: number, season: string, onProgress?: (msg: string) => void): Promise<Anime[]> {
+  const ALL_SEASONS = ['WINTER', 'SPRING', 'SUMMER', 'FALL'];
+  const seasons = season === 'ALL' ? ALL_SEASONS : [season];
+
   let allAnime: Anime[] = [];
   
   const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
@@ -88,81 +92,83 @@ export async function scrapeAnimeData(year: number, season: string, onProgress?:
     if (res.ok) bgmData = await res.json();
   } catch(e) {}
 
-  if (onProgress) onProgress(`🔍 正在爬取 AniList: ${year} 年 ${season} 季...`);
-  
-  try {
-    const seasonData = await fetchAniListBySeason(year, season);
+  for (const currentSeason of seasons) {
+    if (onProgress) onProgress(`🔍 正在爬取 AniList: ${year} 年 ${currentSeason} 季...`);
     
-    for (let i = 0; i < seasonData.length; i++) {
-      const item = seasonData[i];
-      const nativeTitle = item.title.native || item.title.romaji;
+    try {
+      const seasonData = await fetchAniListBySeason(year, currentSeason);
       
-      if (onProgress) onProgress(`翻譯與分級審查 (${i + 1}/${seasonData.length}): ${nativeTitle}`);
-      
-      let titleZh = "";
-      let finalCover = "";
-      
-      // Phase 1: bangumi-data 取的繁中官方名稱 (最準確)
-      if (bgmData.items.length > 0) {
-         const bgmItem = bgmData.items.find((bgm: any) => bgm.title === nativeTitle || (bgm.titleTranslate && Object.values(bgm.titleTranslate).flat().includes(nativeTitle)));
-         if (bgmItem && bgmItem.titleTranslate) {
-            if (bgmItem.titleTranslate['zh-Hant']) {
-              titleZh = bgmItem.titleTranslate['zh-Hant'][0];
-            } else if (bgmItem.titleTranslate['zh-Hans']) {
-              titleZh = bgmItem.titleTranslate['zh-Hans'][0];
-            }
-         }
+      for (let i = 0; i < seasonData.length; i++) {
+        const item = seasonData[i];
+        const nativeTitle = item.title.native || item.title.romaji;
+        
+        if (onProgress) onProgress(`翻譯與分級審查 (${i + 1}/${seasonData.length}): ${nativeTitle}`);
+        
+        let titleZh = "";
+        let finalCover = "";
+        
+        // Phase 1: bangumi-data 取的繁中官方名稱 (最準確)
+        if (bgmData.items.length > 0) {
+           const bgmItem = bgmData.items.find((bgm: any) => bgm.title === nativeTitle || (bgm.titleTranslate && Object.values(bgm.titleTranslate).flat().includes(nativeTitle)));
+           if (bgmItem && bgmItem.titleTranslate) {
+              if (bgmItem.titleTranslate['zh-Hant']) {
+                titleZh = bgmItem.titleTranslate['zh-Hant'][0];
+              } else if (bgmItem.titleTranslate['zh-Hans']) {
+                titleZh = bgmItem.titleTranslate['zh-Hans'][0];
+              }
+           }
+        }
+        
+        // Phase 2: 若無，仰賴 Bangumi REST API 查詢
+        const bgmInfo = await getBangumiDataInfo(nativeTitle);
+        
+        if (bgmInfo.image) {
+           finalCover = bgmInfo.image.replace(/\/c\/|\/m\/|\/s\//g, '/l/');
+        } else {
+           finalCover = item.coverImage?.extraLarge || item.coverImage?.large || "";
+        }
+        
+        if (!titleZh && bgmInfo.title) {
+           titleZh = bgmInfo.title;
+        }
+        
+        await sleep(WAIT_BETWEEN_REQUESTS); 
+        
+        // Phase 3: 放棄維基百科，直接用原名防止奇異改名
+        if (!titleZh) {
+           titleZh = item.title.native || item.title.romaji || item.title.english || "未知動畫";
+        }
+        
+        // 強制將簡體轉換為繁體
+        titleZh = converter(titleZh);
+        
+        // 紳士分級審查 (引入指數休眠防呆)
+        let genres = (item.genres || []).map((g: string) => genreMap[g] || g);
+        const needsAgeCheck = item.genres?.includes('Ecchi') || item.genres?.includes('Hentai') || item.tags?.some((t:any) => t.name === 'Nudity' || t.name === 'Explicit');
+        
+        if (needsAgeCheck) {
+           const ageRating = await getJikanAgeRating(item.title.romaji || nativeTitle || item.title.english || '');
+           if (ageRating.includes('R+') || ageRating.includes('Rx')) {
+              if (!genres.includes('紳士')) genres.push('紳士');
+           }
+           await sleep(350); 
+        }
+        
+        const id = `anilist-${item.id}`;
+        const seasonMap: Record<string, string> = { 'WINTER': '冬', 'SPRING': '春', 'SUMMER': '夏', 'FALL': '秋' };
+        const yearSeason = `${year} ${seasonMap[currentSeason]}`;
+        
+        allAnime.push({
+          id,
+          titleZh,
+          coverImage: finalCover,
+          yearSeason,
+          genres
+        });
       }
-      
-      // Phase 2: 若無，仰賴 Bangumi REST API 查詢
-      const bgmInfo = await getBangumiDataInfo(nativeTitle);
-      
-      if (bgmInfo.image) {
-         finalCover = bgmInfo.image.replace(/\/c\/|\/m\/|\/s\//g, '/l/');
-      } else {
-         finalCover = item.coverImage?.extraLarge || item.coverImage?.large || "";
-      }
-      
-      if (!titleZh && bgmInfo.title) {
-         titleZh = bgmInfo.title;
-      }
-      
-      await sleep(WAIT_BETWEEN_REQUESTS); 
-      
-      // Phase 3: 放棄維基百科，直接用原名防止奇異改名
-      if (!titleZh) {
-         titleZh = item.title.native || item.title.romaji || item.title.english || "未知動畫";
-      }
-      
-      // 強制將簡體轉換為繁體
-      titleZh = converter(titleZh);
-      
-      // 紳士分級審查 (引入指數休眠防呆)
-      let genres = (item.genres || []).map((g: string) => genreMap[g] || g);
-      const needsAgeCheck = item.genres?.includes('Ecchi') || item.genres?.includes('Hentai') || item.tags?.some((t:any) => t.name === 'Nudity' || t.name === 'Explicit');
-      
-      if (needsAgeCheck) {
-         const ageRating = await getJikanAgeRating(item.title.romaji || nativeTitle || item.title.english || '');
-         if (ageRating.includes('R+') || ageRating.includes('Rx')) {
-            if (!genres.includes('紳士')) genres.push('紳士');
-         }
-         await sleep(350); 
-      }
-      
-      const id = `anilist-${item.id}`;
-      const seasonMap: Record<string, string> = { 'WINTER': '冬', 'SPRING': '春', 'SUMMER': '夏', 'FALL': '秋' };
-      const yearSeason = `${year} ${seasonMap[season]}`;
-      
-      allAnime.push({
-        id,
-        titleZh,
-        coverImage: finalCover,
-        yearSeason,
-        genres
-      });
+    } catch(e) {
+      if (onProgress) onProgress(`發生錯誤: ${e}`);
     }
-  } catch(e) {
-    if (onProgress) onProgress(`發生錯誤: ${e}`);
   }
   
   if (onProgress) onProgress('✨ 爬取與翻譯完成！');
