@@ -10,12 +10,12 @@ import { useAnime } from './contexts/AnimeContext';
 import { getCurrentSeasonInfo } from './utils/season';
 
 function App() {
-  const { 
-    watchedList, 
-    handleImport, 
-    handleScrape, 
-    isScraping, 
-    scrapeProgress 
+  const {
+    watchedList,
+    handleImport,
+    handleScrape,
+    isScraping,
+    scrapeProgress
   } = useAnime();
 
   const location = useLocation();
@@ -37,20 +37,20 @@ function App() {
 
         <div className="header-right">
           <div className="nav-tabs">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={`nav-tab ${currentPath === '/' ? 'active' : ''}`}
             >
               所有動畫
             </Link>
-            <Link 
-              to="/plan" 
+            <Link
+              to="/plan"
               className={`nav-tab ${currentPath === '/plan' ? 'active' : ''}`}
             >
               期待動畫
             </Link>
-            <Link 
-              to="/records" 
+            <Link
+              to="/records"
               className={`nav-tab ${currentPath === '/records' ? 'active' : ''}`}
             >
               動畫紀錄
@@ -117,11 +117,11 @@ function App() {
                 <span className="scrape-field-label">季度</span>
                 <div className="season-chips">
                   {([
-                    { value: 'ALL',   label: '全部' },
+                    { value: 'ALL', label: '全部' },
                     { value: 'WINTER', label: '冬（1-3月）' },
                     { value: 'SPRING', label: '春（4-6月）' },
                     { value: 'SUMMER', label: '夏（7-9月）' },
-                    { value: 'FALL',   label: '秋（10-12月）' },
+                    { value: 'FALL', label: '秋（10-12月）' },
                   ] as const).map(s => (
                     <button
                       key={s.value}

@@ -85,10 +85,10 @@ const AllAnimePage = () => {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    // Scroll to the top of the filter bar so the search box is visible
+    // Scroll to the filter bar but slightly past its top to perfectly hide the main header
     const filterElement = document.querySelector('.filter-bar-container');
     if (filterElement) {
-      const yOffset = -100; // Increased offset to see the full filter bar
+      const yOffset = 5; // Positive offset scrolls slightly past the top
       const y = filterElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     } else {

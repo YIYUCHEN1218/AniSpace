@@ -42,7 +42,7 @@ const PlanToWatchPage = () => {
     setCurrentPage(page);
     const headerElement = document.querySelector('.page-header');
     if (headerElement) {
-      const yOffset = -20;
+      const yOffset = 5;
       const y = headerElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     } else {
