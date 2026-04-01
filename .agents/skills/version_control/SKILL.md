@@ -109,29 +109,49 @@ git pull origin Dev
 git checkout -b feature/<name>
 ```
 
-### Step 3 — 分裝提交（單一職責原則）
+### Step 3 — 提交計畫預覽（⚠️ 必須在執行前完成）
 
-**不要一次 `git add .` 全部打包**。按照變更的職責分群提交：
+**在執行任何 `git add` 或 `git commit` 之前**，必須先向使用者呈現完整的提交計畫，格式如下：
+
+---
+
+📋 **預計分成 N 個 Commit，請確認後執行：**
+
+| # | Type | Commit 訊息 | 包含檔案 |
+|---|------|------------|---------|
+| 1 | `feat` | `feat(card): 新增評分星號與 hover 動畫效果` | `AnimeCard.tsx`, `AnimeCard.css` |
+| 2 | `refactor` | `refactor(api): 統一錯誤處理為 Result 型別` | `api.ts` |
+| 3 | `docs` | `docs: 更新 CHANGELOG 說明新版卡片設計` | `CHANGELOG.md` |
+
+**確認後將依序執行所有 commit 並推送至 `<branch-name>`。**
+
+---
+
+> ⚠️ **AI 行為規範**：呈現計畫後**必須停下來等待使用者明確回覆**（如「確認」、「執行」、「OK」等）。
+> 未獲確認前，**禁止執行任何 git 指令**。
+
+使用者確認後，按照計畫依序執行：
 
 ```bash
-# 例：分三次提交，職責明確
-git add src/components/AnimeCard.tsx src/components/AnimeCard.css
-git commit -m "feat(card): 新增評分星號與 hover 動畫效果"
+# 依序執行每個 commit
+git add <files-for-commit-1>
+git commit -m "<message-1>"
 
-git add src/services/api.ts
-git commit -m "refactor(api): 統一錯誤處理為 Result 型別"
+git add <files-for-commit-2>
+git commit -m "<message-2>"
 
-git add docs/CHANGELOG.md
-git commit -m "docs: 更新 CHANGELOG 說明新版卡片設計"
+# ... 以此類推
 ```
 
 ### Step 4 — 推播至遠端
+
+所有 commit 執行完畢後，一次推送至遠端：
 
 ```bash
 # 推送目前分支
 git push origin <branch-name>
 
-# 首次推送新建分支
+# 首次推送新建分支（尚未存在於遠端）
 git push -u origin feature/<name>
 ```
 
