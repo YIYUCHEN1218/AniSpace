@@ -11,8 +11,18 @@ import { scrapeAnimeData } from './services/scraper';
 
 const LOCAL_STORAGE_KEY = 'anime_manager_watched_list';
 const PLAN_TO_WATCH_KEY = 'anime_manager_plan_to_watch';
-const NSFW_GENRES = ['Hentai', 'Ecchi', 'Erotica', 'Boys Love', 'Girls Love', '耽美', '百合'];
+const NSFW_GENRES = ['Hentai', 'Ecchi', 'Erotica', 'Boys Love', 'Girls Love', '耽美', '百合', '紳士'];
 const ITEMS_PER_PAGE = 25; // 5 rows * 5 columns
+
+// Helper for sorting yearSeason strings like "2025 冬"
+const seasonWeight: Record<string, number> = { '冬': 4, '秋': 3, '夏': 2, '春': 1 };
+const parseSeason = (ys: string) => {
+  if (!ys) return 0;
+  const parts = ys.split(' ');
+  const year = parseInt(parts[0]) || 0;
+  const seasonValue = seasonWeight[parts[1]] || 0;
+  return year * 10 + seasonValue;
+};
 
 function App() {
   const [activeTab, setActiveTab] = useState<'all' | 'watched' | 'plan_to_watch'>('all');
@@ -98,7 +108,7 @@ function App() {
   // Derived state for filters options
   const availableYears = useMemo(() => {
     const years = new Set(allAnime.map(a => a.yearSeason));
-    return Array.from(years).sort((a, b) => b.localeCompare(a)); // Descending
+    return Array.from(years).sort((a, b) => parseSeason(b) - parseSeason(a)); // Descending year & season
   }, [allAnime]);
 
   const availableGenres = useMemo(() => {
@@ -130,7 +140,7 @@ function App() {
 
       const matchYear = selectedYear ? anime.yearSeason === selectedYear : true;
       const matchGenre = selectedGenres.length === 0 ? true : selectedGenres.some(sg => {
-        if (sg === '紳士') return anime.genres.includes('Hentai') || anime.genres.includes('Ecchi');
+        if (sg === '紳士') return anime.genres.includes('紳士') || anime.genres.includes('Hentai') || anime.genres.includes('Ecchi');
         return anime.genres.includes(sg);
       });
       const matchSearch = searchQuery ? anime.titleZh.toLowerCase().includes(searchQuery.toLowerCase()) : true;
@@ -140,10 +150,10 @@ function App() {
     // Sorting
     result = [...result].sort((a, b) => {
       if (sortBy === 'date_desc') {
-        return b.yearSeason.localeCompare(a.yearSeason);
+        return parseSeason(b.yearSeason) - parseSeason(a.yearSeason);
       }
       if (sortBy === 'date_asc') {
-        return a.yearSeason.localeCompare(b.yearSeason);
+        return parseSeason(a.yearSeason) - parseSeason(b.yearSeason);
       }
       if (sortBy === 'rating_desc' || sortBy === 'rating_asc') {
         // Only sort by rating if in watched tab, else fallback to date
@@ -169,6 +179,17 @@ function App() {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   }, [filteredData, currentPage]);
+
+  // Scroll to top when page changes
+  useEffect(() => {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      // 確保捲動到剛好能看到 FilterBar 和標題的合適位置
+      const yOffset = -20; 
+      const y = mainContent.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [currentPage]);
 
   // Handlers
   const handleActionClick = (anime: Anime) => {
@@ -236,10 +257,22 @@ function App() {
     try {
       const data = await scrapeAnimeData(setScrapeProgress);
       if (data && data.length > 0) {
-        // Sort descending by year to show newest anime first
-        data.sort((a, b) => b.yearSeason.localeCompare(a.yearSeason));
-        setAllAnime(data);
-        localStorage.setItem('anime_manager_cached_data', JSON.stringify(data));
+        setAllAnime(prev => {
+          // 資料庫新舊合併 (Merge State)
+          const mergedMap = new Map();
+          // 保留舊的
+          prev.forEach(item => mergedMap.set(item.id, item));
+          // 寫入/更新新的
+          data.forEach(item => mergedMap.set(item.id, item));
+          
+          const mergedData = Array.from(mergedMap.values());
+          // 排序
+          mergedData.sort((a, b) => parseSeason(b.yearSeason) - parseSeason(a.yearSeason));
+          
+          // 寫入硬碟快取
+          localStorage.setItem('anime_manager_cached_data', JSON.stringify(mergedData));
+          return mergedData;
+        });
       }
     } catch (err) {
       console.error(err);
@@ -300,7 +333,7 @@ function App() {
         </div>
       </header>
 
-      <main className="container wrapper">
+      <main id="main-content" className="container wrapper">
         <FilterBar
           years={availableYears}
           genres={availableGenres}
