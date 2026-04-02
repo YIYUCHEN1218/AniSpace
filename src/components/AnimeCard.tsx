@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import './AnimeCard.css';
 import type { Anime, WatchedAnime } from '../types';
-import { Star, Heart, Edit2, Check } from 'lucide-react';
+import { Star, Heart, Edit2, Check, X } from 'lucide-react';
 import { useAnime } from '../contexts/AnimeContext';
 
 interface AnimeCardProps {
@@ -12,16 +13,24 @@ interface AnimeCardProps {
   onPlanToWatchToggle: (anime: Anime) => void;
 }
 
-const AnimeCard: React.FC<AnimeCardProps> = ({ 
-  anime, 
-  isWatched, 
+interface PopoverPos {
+  top: number;
+  left: number;
+  width: number;
+}
+
+const AnimeCard: React.FC<AnimeCardProps> = ({
+  anime,
+  isWatched,
   isPlanToWatch,
-  onActionClick, 
-  onPlanToWatchToggle 
+  onActionClick,
+  onPlanToWatchToggle,
 }) => {
   const { setCorrection, getCorrectedTitle } = useAnime();
   const [isEditingTitle, setIsEditingTitle] = useState(false);
-  const [newTitle, setNewTitle] = useState(getCorrectedTitle(anime.titleZh));
+  const [newTitle, setNewTitle] = useState('');
+  const [popoverPos, setPopoverPos] = useState<PopoverPos>({ top: 0, left: 0, width: 0 });
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const displayTitle = getCorrectedTitle(anime.titleZh);
 
@@ -35,33 +44,44 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
 
   const handleEditClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    setNewTitle(displayTitle);
+    if (cardRef.current) {
+      const rect = cardRef.current.getBoundingClientRect();
+      const popupWidth = Math.max(rect.width * 1.365, 315);
+      setPopoverPos({
+        top: rect.top + rect.height * 0.28,
+        left: rect.left + rect.width / 2 - popupWidth / 2,
+        width: popupWidth,
+      });
+    }
     setIsEditingTitle(true);
   };
 
+  const handleCancel = () => setIsEditingTitle(false);
+
   return (
-    <div className="anime-card fade-in">
-      {/* Title correction icon - Top Left */}
-      <button 
-        className="edit-title-btn" 
+    <div className="anime-card fade-in" ref={cardRef}>
+      {/* Edit title — Top Left */}
+      <button
+        className="edit-title-btn"
         onClick={handleEditClick}
         title="編輯顯示名稱"
       >
         <Edit2 size={14} />
       </button>
 
-      {/* Plan to watch toggle - Top Right */}
-      <button 
+      {/* Plan-to-watch — Top Right */}
+      <button
         className={`heart-btn ${isPlanToWatch ? 'active' : ''}`}
         onClick={() => onPlanToWatchToggle(anime as Anime)}
-        title={isPlanToWatch ? "從期待清單移除" : "加入期待清單"}
+        title={isPlanToWatch ? '從期待清單移除' : '加入期待清單'}
       >
-        <Heart size={20} className={isPlanToWatch ? "heart-fill" : ""} />
+        <Heart size={20} className={isPlanToWatch ? 'heart-fill' : ''} />
       </button>
 
       <div className="card-image-container">
         <img src={anime.coverImage} alt={displayTitle} className="card-image" loading="lazy" />
-        
-        {/* Rating Badge */}
+
         {isWatched && (anime as WatchedAnime).userRating && (
           <div className="rating-badge">
             <Star size={14} fill="#fbbf24" />
@@ -70,11 +90,11 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
         )}
 
         <div className="card-overlay">
-          <button 
+          <button
             className={`action-btn ${isWatched ? 'watched' : ''}`}
             onClick={(e) => {
-               e.stopPropagation();
-               onActionClick(anime as Anime);
+              e.stopPropagation();
+              onActionClick(anime as Anime);
             }}
           >
             {isWatched ? '查看評價' : '加入已看'}
@@ -85,7 +105,7 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
       <div className="card-content">
         <h3 className="card-title">{displayTitle}</h3>
         <p className="card-year">{anime.yearSeason}</p>
-        
+
         <div className="card-tags-container">
           <div className="card-tags-summary">
             {anime.genres.slice(0, 4).map(genre => (
@@ -103,33 +123,40 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
         </div>
 
         {isWatched && (anime as WatchedAnime).userComment && (
-          <p className="card-comment">"{((anime as WatchedAnime).userComment)}"</p>
+          <p className="card-comment">"{(anime as WatchedAnime).userComment}"</p>
         )}
       </div>
 
-      {/* Title Edit Popover */}
-      {isEditingTitle && (
-        <div className="edit-popover" onClick={() => setIsEditingTitle(false)}>
-          <div className="edit-popover-content glass-panel" onClick={e => e.stopPropagation()}>
-            <h4>修正動畫名稱</h4>
+      {/* Edit-title popup — Portal ensures it's unaffected by card transforms */}
+      {isEditingTitle && createPortal(
+        <>
+          <div className="card-edit-backdrop" onClick={handleCancel} />
+          <div
+            className="card-edit-popup"
+            style={{ top: popoverPos.top, left: popoverPos.left, width: popoverPos.width }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="card-edit-popup-label">顯示名稱</div>
             <form onSubmit={handleTitleSubmit}>
-              <input 
-                type="text" 
-                value={newTitle} 
+              <input
+                type="text"
+                className="card-edit-popup-input"
+                value={newTitle}
                 onChange={e => setNewTitle(e.target.value)}
                 autoFocus
-                className="scrape-select"
-                style={{ width: '100%', marginBottom: '12px', padding: '8px' }}
               />
-              <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-                <button type="button" className="btn-glass" onClick={() => setIsEditingTitle(false)}>取消</button>
-                <button type="submit" className="btn-primary" style={{ padding: '6px 12px' }}>
-                  <Check size={16} style={{ marginRight: '4px' }} /> 儲存
+              <div className="card-edit-popup-actions">
+                <button type="button" className="card-edit-popup-btn cancel" onClick={handleCancel} title="取消">
+                  <X size={15} />
+                </button>
+                <button type="submit" className="card-edit-popup-btn save" title="儲存">
+                  <Check size={15} />
                 </button>
               </div>
             </form>
           </div>
-        </div>
+        </>,
+        document.body,
       )}
     </div>
   );

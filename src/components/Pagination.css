@@ -23,11 +23,11 @@
 }
 
 .page-nav-btn:hover:not(:disabled) {
-  background: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.5);
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 5px 15px rgba(100, 108, 255, 0.4);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.25);
 }
 
 .page-nav-btn:disabled {
@@ -63,10 +63,11 @@
 }
 
 .page-num-btn.active {
-  background: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
-  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  font-weight: 700;
 }
 
 .ellipsis {

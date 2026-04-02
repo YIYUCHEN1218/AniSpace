@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FilterBar.css';
-import { Search, SlidersHorizontal, ArrowDownAZ, AlertTriangle } from 'lucide-react';
+import { Search, SlidersHorizontal, ArrowDownAZ, AlertTriangle, Globe } from 'lucide-react';
 import { getRelativeSeasonString } from '../utils/season';
+import OnlineSearchModal from './OnlineSearchModal';
 
 interface FilterBarProps {
   years: string[];
@@ -32,6 +33,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onSortChange,
   on18PlusChange
 }) => {
+  const [isOnlineSearchOpen, setIsOnlineSearchOpen] = useState(false);
+
   const toggleGenre = (genre: string) => {
     if (selectedGenres.includes(genre)) {
       onGenreChange(selectedGenres.filter(g => g !== genre));
@@ -67,6 +70,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
             onChange={(e) => onSearchChange(e.target.value)}
             className="search-input"
           />
+          <button 
+            className="online-search-trigger" 
+            onClick={() => setIsOnlineSearchOpen(true)}
+            title="線上搜尋新番資訊"
+          >
+            <Globe size={18} />
+          </button>
         </div>
         
         <div className="filter-controls">
@@ -152,6 +162,11 @@ const FilterBar: React.FC<FilterBarProps> = ({
           )}
         </div>
       </div>
+
+      <OnlineSearchModal 
+        isOpen={isOnlineSearchOpen} 
+        onClose={() => setIsOnlineSearchOpen(false)} 
+      />
     </div>
   );
 };

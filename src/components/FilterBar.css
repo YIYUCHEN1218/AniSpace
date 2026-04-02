@@ -37,18 +37,44 @@
 .search-input {
   width: 100%;
   padding: 0.5rem 1rem;
-  padding-left: calc(var(--spacing-3) * 3 + 20px);
+  padding: 0 40px 0 calc(var(--spacing-3) * 3 + 20px);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   color: var(--text-primary);
   height: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   outline: none;
+}
+
+.online-search-trigger {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-muted);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.online-search-trigger:hover {
+  background: var(--accent-color);
+  color: #000;
+  border-color: var(--accent-color);
 }
 
 .filter-controls {
@@ -210,8 +236,8 @@
 }
 
 .genre-tag.active {
-  background: var(--primary-gradient);
-  color: white;
-  border-color: transparent;
-  box-shadow: 0 4px 10px rgba(100, 108, 255, 0.3);
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
 }
