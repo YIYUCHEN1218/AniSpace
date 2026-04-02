@@ -118,10 +118,63 @@ function removeDuplicates(animeList) {
   return uniqueList;
 }
 
+async function parallelLimit(items, limit, fn) {
+  const results = [];
+  const executing = [];
+  for (const item of items) {
+    const p = Promise.resolve().then(() => fn(item));
+    results.push(p);
+    if (limit <= items.length) {
+      const e = p.then(() => executing.splice(executing.indexOf(e), 1));
+      executing.push(e);
+      if (executing.length >= limit) {
+        await Promise.race(executing);
+      }
+    }
+  }
+  return Promise.all(results);
+}
+
+const SEASON_MONTH_MAP = {
+  'WINTER': '01', 'SPRING': '04', 'SUMMER': '07', 'FALL': '10'
+};
+
+async function fetchACGSecretsTitles(year, season) {
+  const month = SEASON_MONTH_MAP[season];
+  if (!month) return new Map();
+  try {
+    const url = `https://acgsecrets.hk/bangumi/${year}${month}/`;
+    const res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    if (!res.ok) return new Map();
+    const html = await res.text();
+    const titleMap = new Map();
+    // acgsecrets.hk uses JSON-LD or script data for anime info
+    const regex = /"name":"([^"]+)","alternateName":\["([^"]+)"/g;
+    let match;
+    while ((match = regex.exec(html)) !== null) {
+      const zh = match[1].trim();
+      const jp = match[2].trim();
+      if (zh && jp) titleMap.set(jp, zh);
+    }
+    return titleMap;
+  } catch (e) {
+    return new Map();
+  }
+}
+
 async function main() {
   try {
+    const acgTitlesMap = await fetchACGSecretsTitles(YEAR, SEASON);
+    if (acgTitlesMap.size > 0) {
+      console.log(`🌐 已從 ACG Secrets 獲取 ${acgTitlesMap.size} 個優先標題。`);
+    }
+
     let animeList = await fetchFromAniList(YEAR, SEASON);
-    console.log(`✅ 成功獲取 ${animeList.length} 筆資料。`);
+    console.log(`✅ 成功從 AniList 獲取 ${animeList.length} 筆資料。`);
     animeList = removeDuplicates(animeList);
 
     console.log("🌐 正在下載 bangumi-data 作為靜態輔助翻譯庫...");
@@ -131,25 +184,27 @@ async function main() {
       if (bRes.ok) bgmData = await bRes.json();
     } catch(e) {}
 
-    console.log("🌐 開始逐筆翻譯與分級檢定...");
-    const processedList = [];
+    console.log(`🚀 開始並行處理 ${animeList.length} 筆資料...`);
     const converter = OpenCC.Converter({ from: 'cn', to: 'tw' });
     
-    let cur = 1;
-    for (const anime of animeList) {
+    let completed = 0;
+    const processedList = await parallelLimit(animeList, 5, async (anime) => {
       const native = anime.title.native || anime.title.romaji;
-      console.log(`  [${cur++}/${animeList.length}] 處理: ${native}`);
       
       let titleZh = "";
       let finalCover = "";
-      let fromBgmData = false;
 
-      if (bgmData.items.length > 0) {
+      // Priority 0: ACG Secrets
+      if (acgTitlesMap.has(native)) {
+        titleZh = acgTitlesMap.get(native);
+      }
+
+      // Phase 1: bangumi-data
+      if (!titleZh && bgmData.items.length > 0) {
           const bgmItem = bgmData.items.find((bgm) => bgm.title === native || (bgm.titleTranslate && Object.values(bgm.titleTranslate).flat().includes(native)));
           if (bgmItem && bgmItem.titleTranslate) {
             if (bgmItem.titleTranslate['zh-Hant']) {
               titleZh = bgmItem.titleTranslate['zh-Hant'][0];
-              fromBgmData = true;
             } else if (bgmItem.titleTranslate['zh-Hans']) {
               titleZh = bgmItem.titleTranslate['zh-Hans'][0];
             }
@@ -166,17 +221,7 @@ async function main() {
       if (!titleZh && bgmInfo.title) {
         titleZh = bgmInfo.title;
       }
-      await new Promise(r => setTimeout(r, 100));
-
-      if (!fromBgmData) {
-          const wikiTitle = await getWikipediaTaiwanTranslation(native);
-          if (wikiTitle && wikiTitle !== native) {
-              titleZh = wikiTitle;
-              fromBgmData = true;
-          }
-          await new Promise(r => setTimeout(r, 100));
-      }
-
+      
       if (!titleZh) {
           titleZh = anime.title.native || anime.title.romaji || anime.title.english;
       }
@@ -190,10 +235,14 @@ async function main() {
           if (ageRating.includes('R+') || ageRating.includes('Rx')) {
               if (!genres.includes('紳士')) genres.push('紳士');
           }
-          await new Promise(r => setTimeout(r, 400));
       }
 
-      processedList.push({
+      completed++;
+      if (completed % 5 === 0 || completed === animeList.length) {
+        console.log(`  進度: [${completed}/${animeList.length}] 正在處理...`);
+      }
+
+      return {
         sourceId: `anilist-${anime.id}`,
         titleZh: titleZh,
         titleRomaji: anime.title.romaji,
@@ -202,8 +251,8 @@ async function main() {
         episodes: anime.episodes,
         genres: genres,
         coverImage: finalCover
-      });
-    }
+      };
+    });
 
     const outputPath = path.join(process.cwd(), 'new_anime_results.json');
     await fs.writeFile(outputPath, JSON.stringify(processedList, null, 2), 'utf-8');

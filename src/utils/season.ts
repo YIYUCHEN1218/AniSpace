@@ -29,22 +29,37 @@ function getAdjustedSeasonIndex(date: Date) {
   return (qIndex + 3) % 4;
 }
 
-export function getCurrentSeasonInfo() {
+export function getSeasonInfo(offset: number = 0) {
   const date = new Date();
-  const year = date.getFullYear();
-  const index = getAdjustedSeasonIndex(date);
+  let baseYear = date.getFullYear();
+  let index = getAdjustedSeasonIndex(date);
   
-  // If index is 3 (Winter) and it is Jan-Mar (qIndex 0), the year should be Year-1? 
-  // User says: Current is 2026 Spring (Apr). 
-  // If it was Jan, and they want "2025 Winter", then index 3 corresponds to year-1.
+  // Base normalization (e.g., if Jan-Mar is Winter, it belongs to previous year)
   const qIndex = Math.floor(date.getMonth() / 3);
-  const adjustedYear = (index === 3 && qIndex === 0) ? year - 1 : year;
+  if (index === 3 && qIndex === 0) baseYear--;
 
-  return { 
-    year: adjustedYear, 
-    seasonZh: SEASONS_ZH[index], 
-    seasonEng: SEASONS_ENG[index] 
+  let finalIndex = index + offset;
+  let finalYear = baseYear;
+  
+  // Apply offset and adjust year
+  while (finalIndex < 0) {
+    finalIndex += 4;
+    finalYear--;
+  }
+  while (finalIndex > 3) {
+    finalIndex -= 4;
+    finalYear++;
+  }
+
+  return {
+    year: finalYear,
+    seasonZh: SEASONS_ZH[finalIndex],
+    seasonEng: SEASONS_ENG[finalIndex]
   };
+}
+
+export function getCurrentSeasonInfo() {
+  return getSeasonInfo(0);
 }
 
 export function getRelativeSeasonString(offset: number) {
