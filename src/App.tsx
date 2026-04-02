@@ -105,9 +105,9 @@ function App() {
               >
                 <option value="ALL">全部（2010 年起）</option>
                 {Array.from(
-                  { length: new Date().getFullYear() - 1999 + 2 },
-                  (_, i) => 2000 + i
-                ).slice().reverse().map(y => (
+                  { length: new Date().getFullYear() - 2010 + 1 },
+                  (_, i) => 2010 + i
+                ).reverse().map(y => (
                   <option key={y} value={y}>{y} 年</option>
                 ))}
               </select>

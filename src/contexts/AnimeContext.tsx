@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useState, useEffect, useMemo, useRef } from 'react';
-import type { Anime, WatchedAnime, SortOption } from '../types';
-import { LOCAL_STORAGE_KEY, PLAN_TO_WATCH_KEY, CACHED_DATA_KEY, NSFW_GENRES, ITEMS_PER_PAGE } from '../utils/constants';
-import { parseSeason, getCurrentSeasonInfo } from '../utils/season';
-import { scrapeAnimeData } from '../services/scraper';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import type { Anime, WatchedAnime } from '../types';
+import { LOCAL_STORAGE_KEY, PLAN_TO_WATCH_KEY, CACHED_DATA_KEY } from '../utils/constants';
+import { parseSeason, getSeasonInfo } from '../utils/season';
+import { scrapeAnimeData, searchAnimeOnline } from '../services/scraper';
 import { useTitleCorrections } from '../hooks/useTitleCorrections';
 
 interface AnimeContextType {
@@ -12,6 +12,7 @@ interface AnimeContextType {
   isScraping: boolean;
   scrapeProgress: string;
   handleScrape: (year: number | 'ALL', season: string) => Promise<void>;
+  handleSearchOnline: (query: string) => Promise<Anime[]>;
   handleSaveReview: (watchedAnime: WatchedAnime) => void;
   handlePlanToWatchToggle: (anime: Anime) => void;
   handleImport: (importedData: WatchedAnime[]) => void;
@@ -45,28 +46,39 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       } catch (e) { }
     }
 
-    const checkAndRunAutoScrape = (currentData: Anime[]) => {
+    const checkAndRunAutoScrape = async (currentData: Anime[]) => {
       if (autoScrapeChecked.current) return;
       autoScrapeChecked.current = true;
       
-      const curr = getCurrentSeasonInfo();
-      const targetString = `${curr.year} ${curr.seasonZh}`;
-      
-      const hasCurrentSeason = currentData.some(a => a.yearSeason === targetString);
-      if (!hasCurrentSeason) {
-        scrapeAnimeData(curr.year, curr.seasonEng).then(data => {
-          if (data && data.length > 0) {
-            setAllAnime(prev => {
+      const seasonsToScan = [getSeasonInfo(0), getSeasonInfo(-1)];
+      let updatedData = [...currentData];
+      let needsSave = false;
+
+      for (const target of seasonsToScan) {
+        const targetString = `${target.year} ${target.seasonZh}`;
+        const hasData = updatedData.some(a => a.yearSeason === targetString);
+        
+        if (!hasData) {
+          try {
+            console.log(`Auto scraping for: ${targetString}`);
+            const data = await scrapeAnimeData(target.year, target.seasonEng);
+            if (data && data.length > 0) {
               const mergedMap = new Map();
-              prev.forEach(item => mergedMap.set(item.id, item));
+              updatedData.forEach(item => mergedMap.set(item.id, item));
               data.forEach(item => mergedMap.set(item.id, item));
-              const mergedData = Array.from(mergedMap.values());
-              mergedData.sort((a, b) => parseSeason(b.yearSeason) - parseSeason(a.yearSeason));
-              localStorage.setItem(CACHED_DATA_KEY, JSON.stringify(mergedData));
-              return mergedData;
-            });
+              updatedData = Array.from(mergedMap.values());
+              updatedData.sort((a, b) => parseSeason(b.yearSeason) - parseSeason(a.yearSeason));
+              needsSave = true;
+            }
+          } catch (e) {
+            console.error(`Auto scrape failed for ${targetString}:`, e);
           }
-        }).catch(e => console.error('Auto scrape failed:', e));
+        }
+      }
+
+      if (needsSave) {
+        setAllAnime(updatedData);
+        localStorage.setItem(CACHED_DATA_KEY, JSON.stringify(updatedData));
       }
     };
 
@@ -108,7 +120,7 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const handleScrape = async (year: number | 'ALL', season: string) => {
     setIsScraping(true);
-    setScrapeProgress('初始化爬蟲模組...');
+    setScrapeProgress('正在初始化爬蟲模組...');
     try {
       const START_YEAR = 2010;
       const currentYear = new Date().getFullYear();
@@ -117,7 +129,10 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         : [year];
 
       for (const y of yearsToScrape) {
-        const data = await scrapeAnimeData(y, season, setScrapeProgress);
+        const data = await scrapeAnimeData(y, season, (msg) => {
+          setScrapeProgress(msg);
+        });
+        
         if (data && data.length > 0) {
           setAllAnime(prev => {
             const mergedMap = new Map();
@@ -139,6 +154,10 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setScrapeProgress('');
       }, 2000);
     }
+  };
+
+  const handleSearchOnline = async (query: string) => {
+    return await searchAnimeOnline(query);
   };
 
   const handleSaveReview = (watchedAnime: WatchedAnime) => {
@@ -183,6 +202,7 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       isScraping,
       scrapeProgress,
       handleScrape,
+      handleSearchOnline,
       handleSaveReview,
       handlePlanToWatchToggle,
       handleImport,
