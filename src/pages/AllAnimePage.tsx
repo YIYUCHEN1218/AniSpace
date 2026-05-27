@@ -23,7 +23,6 @@ const AllAnimePage = () => {
   const [selectedGenres, setSelectedGenres] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortOption>('date_desc');
-  const [show18Plus, setShow18Plus] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,8 +45,6 @@ const AllAnimePage = () => {
 
   const filteredData = useMemo(() => {
     let result = allAnime.filter(anime => {
-      const isNSFW = anime.genres.some(g => NSFW_GENRES.includes(g));
-      if (!show18Plus && isNSFW) return false;
 
       const matchYear = selectedYear ? anime.yearSeason === selectedYear : true;
       const matchGenre = selectedGenres.length === 0 ? true : selectedGenres.some(sg => {
@@ -65,11 +62,11 @@ const AllAnimePage = () => {
     });
 
     return result;
-  }, [allAnime, selectedYear, selectedGenres, searchQuery, sortBy, show18Plus]);
+  }, [allAnime, selectedYear, selectedGenres, searchQuery, sortBy]);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedYear, selectedGenres, searchQuery, sortBy, show18Plus]);
+  }, [selectedYear, selectedGenres, searchQuery, sortBy]);
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const paginatedData = useMemo(() => {
@@ -105,12 +102,10 @@ const AllAnimePage = () => {
         selectedGenres={selectedGenres}
         searchQuery={searchQuery}
         sortBy={sortBy}
-        show18Plus={show18Plus}
         onYearChange={setSelectedYear}
         onGenreChange={setSelectedGenres}
         onSearchChange={setSearchQuery}
         onSortChange={(s) => setSortBy(s as SortOption)}
-        on18PlusChange={setShow18Plus}
       />
 
       {filteredData.length === 0 ? (

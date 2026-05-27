@@ -174,7 +174,7 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease-out;
-  max-height: 120px; /* Base height */
+  max-height: 135px; /* Base height adjusted for 2 lines */
   overflow: hidden;
 }
 
@@ -184,14 +184,14 @@
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--text-primary);
   margin-bottom: var(--spacing-1);
   line-height: 1.4;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* Default to 1 line */
-  line-clamp: 1;
+  -webkit-line-clamp: 2; /* Default to 2 lines */
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: all 0.3s ease;

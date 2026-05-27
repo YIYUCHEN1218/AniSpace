@@ -11,12 +11,7 @@ interface FilterBarProps {
   selectedGenres: string[];
   searchQuery: string;
   sortBy: string;
-  show18Plus: boolean;
-  onYearChange: (year: string) => void;
-  onGenreChange: (genres: string[]) => void;
-  onSearchChange: (query: string) => void;
   onSortChange: (sort: string) => void;
-  on18PlusChange: (show: boolean) => void;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
@@ -26,12 +21,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
   selectedGenres,
   searchQuery,
   sortBy,
-  show18Plus,
   onYearChange,
   onGenreChange,
   onSearchChange,
-  onSortChange,
-  on18PlusChange
+  onSortChange
 }) => {
   const [isOnlineSearchOpen, setIsOnlineSearchOpen] = useState(false);
 
@@ -120,15 +113,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
               <option value="rating_desc">你的評分 (高到低)</option>
               <option value="rating_asc">你的評分 (低到高)</option>
             </select>
-
-            <button 
-              className={`toggle-18plus ${show18Plus ? 'active' : ''}`}
-              onClick={() => on18PlusChange(!show18Plus)}
-              title="顯示18+內容"
-            >
-              <AlertTriangle size={16} />
-              <span>18+</span>
-            </button>
           </div>
         </div>
       </div>
@@ -151,15 +135,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
               {genre}
             </button>
           ))}
-          {show18Plus && (
-            <button
-              className={`genre-tag ${selectedGenres.includes('紳士') ? 'active' : ''}`}
-              onClick={() => toggleGenre('紳士')}
-              style={{ borderColor: 'rgba(255, 50, 50, 0.4)', color: selectedGenres.includes('紳士') ? '#fff' : '#ff5555', backgroundColor: selectedGenres.includes('紳士') ? '#ff3333' : 'transparent' }}
-            >
-              紳士
-            </button>
-          )}
+          <button
+            className={`genre-tag ${selectedGenres.includes('紳士') ? 'active' : ''}`}
+            onClick={() => toggleGenre('紳士')}
+            style={{ borderColor: 'rgba(255, 50, 50, 0.4)', color: selectedGenres.includes('紳士') ? '#fff' : '#ff5555', backgroundColor: selectedGenres.includes('紳士') ? '#ff3333' : 'transparent' }}
+          >
+            紳士
+          </button>
         </div>
       </div>
 

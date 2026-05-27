@@ -13,17 +13,13 @@ function App() {
   const {
     watchedList,
     handleImport,
-    handleScrape,
+    handleSync,
     isScraping,
     scrapeProgress
   } = useAnime();
 
   const location = useLocation();
   const currentPath = location.pathname;
-
-  const [isScrapeModalOpen, setIsScrapeModalOpen] = useState(false);
-  const [scrapeYear, setScrapeYear] = useState<number | 'ALL'>(new Date().getFullYear());
-  const [scrapeSeason, setScrapeSeason] = useState<string>(getCurrentSeasonInfo().seasonEng);
 
   return (
     <div className="app-container">
@@ -60,12 +56,12 @@ function App() {
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             <button
               className="btn-glass"
-              onClick={() => setIsScrapeModalOpen(true)}
+              onClick={handleSync}
               disabled={isScraping}
               style={{ fontSize: '0.85rem', padding: 'var(--spacing-2) var(--spacing-4)' }}
             >
               {isScraping ? <Loader2 className="animate-spin" size={16} /> : <DownloadCloud size={16} />}
-              {isScraping ? scrapeProgress : '搜尋新動畫'}
+              {isScraping ? scrapeProgress : '同步最新資料'}
             </button>
             <ImportExportButtons
               watchedData={watchedList}
@@ -83,72 +79,7 @@ function App() {
         </Routes>
       </main>
 
-      {isScrapeModalOpen && (
-        <div className="modal-overlay fade-in" onClick={() => setIsScrapeModalOpen(false)}>
-          <div className="scrape-modal glass-panel" onClick={e => e.stopPropagation()}>
-            <div className="scrape-modal-header">
-              <h2 className="scrape-modal-title">蒐集新動畫</h2>
-              <p className="scrape-modal-subtitle">
-                選擇年份與季度，系統將自動從 AniList、Bangumi 等平台抓取最新動畫資料並合併至收藏庫。
-              </p>
-            </div>
-            <div className="scrape-modal-divider" />
-            <div className="scrape-field">
-              <span className="scrape-field-label">年份</span>
-              <select
-                className="scrape-select"
-                value={scrapeYear}
-                onChange={e => {
-                  const val = e.target.value;
-                  setScrapeYear(val === 'ALL' ? 'ALL' : Number(val));
-                }}
-              >
-                <option value="ALL">全部（2010 年起）</option>
-                {Array.from(
-                  { length: new Date().getFullYear() - 2010 + 1 },
-                  (_, i) => 2010 + i
-                ).reverse().map(y => (
-                  <option key={y} value={y}>{y} 年</option>
-                ))}
-              </select>
-            </div>
-            {scrapeYear !== 'ALL' && (
-              <div className="scrape-field">
-                <span className="scrape-field-label">季度</span>
-                <div className="season-chips">
-                  {([
-                    { value: 'ALL', label: '全部' },
-                    { value: 'WINTER', label: '冬（1-3月）' },
-                    { value: 'SPRING', label: '春（4-6月）' },
-                    { value: 'SUMMER', label: '夏（7-9月）' },
-                    { value: 'FALL', label: '秋（10-12月）' },
-                  ] as const).map(s => (
-                    <button
-                      key={s.value}
-                      className={`season-chip ${scrapeSeason === s.value ? 'active' : ''}`}
-                      onClick={() => setScrapeSeason(s.value)}
-                    >
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-            <div className="scrape-modal-actions">
-              <button className="btn-glass" onClick={() => setIsScrapeModalOpen(false)}>取消返回</button>
-              <button
-                className="btn-primary"
-                onClick={() => {
-                  setIsScrapeModalOpen(false);
-                  handleScrape(scrapeYear, scrapeYear === 'ALL' ? 'ALL' : scrapeSeason);
-                }}
-              >
-                開始抓取
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 }
