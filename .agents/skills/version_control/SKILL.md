@@ -1,9 +1,12 @@
 ---
 name: version_control
-description: 協助管理任何專案的 Git 版本控制，落實多分支策略（Pro/Dev/Feature/Hotfix）與完整 Conventional Commits 規範。適用於所有類型的專案。
+description: 🛑 CRITICAL: Before running ANY git command (commit, checkout, push, merge), you MUST read this skill file first. It contains mandatory branching and commit preview rules.
 ---
 
 # Version Control Skill
+
+> **[AI AGENT DIRECTIVE - MANDATORY]**
+> Whenever the user asks you to push, commit, save, or manage version control, you **MUST** follow the procedures in this file exactly. **DO NOT** use `run_command` for git operations without first completing Step 3 (Submit Plan Preview) and receiving explicit user approval.
 
 此 Skill 提供通用的 Git 版本控制原則與操作流程，適用於任何規模與類型的專案。
 
