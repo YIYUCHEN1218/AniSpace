@@ -155,7 +155,8 @@
       "劇情",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -748,8 +749,8 @@
   },
   {
     "id": "anilist-187402",
-    "titleZh": "轉生了的大聖女，拼死隱瞞自己身為聖女",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/61/81/542007_wNKJa.jpg",
+    "titleZh": "転生した大聖女は、聖女であることをひた隠す",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx187402-qPbg4OZlQXxL.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -770,8 +771,8 @@
   },
   {
     "id": "anilist-207327",
-    "titleZh": "致身處比任何地方都更遙遠的你",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/fa/14/626870_J9L49.jpg",
+    "titleZh": "どこよりも遠い場所にいる君へ",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207327-FFWbqs7iMFKJ.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "懸疑",
@@ -780,8 +781,8 @@
   },
   {
     "id": "anilist-212503",
-    "titleZh": "冰劍的魔術師將要統一世界 第二季",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ec/2f/654294_3D6u6.jpg",
+    "titleZh": "冰剣の魔術師が世界を統べるⅡ",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212503-LEd6BaGLBq63.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -814,8 +815,8 @@
   },
   {
     "id": "anilist-186742",
-    "titleZh": "某暗部的少女共棲",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/1c/9b/537738_0zLU6.jpg",
+    "titleZh": "とある暗部の少女共棲",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx186742-Q9IOgWxAxfSR.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -859,8 +860,8 @@
   },
   {
     "id": "anilist-202390",
-    "titleZh": "少女與戰車 最終章 第5話",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/9c/b8/208829_k5k0l.jpg",
+    "titleZh": "ガールズ＆パンツァー 最終章 第5話",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx202390-HCkyjItNJ4Go.png",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -869,8 +870,8 @@
   },
   {
     "id": "anilist-194116",
-    "titleZh": "最終樂章 吹響吧！上低音號 後篇",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/86/a6/563041_X0778.jpg",
+    "titleZh": "最終楽章 響け！ユーフォニアム後編",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx194116-KmxnVt6IzvtC.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "劇情",
@@ -890,8 +891,8 @@
   },
   {
     "id": "anilist-195571",
-    "titleZh": "硃色の仮面",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx195571-Pamu2vEgJtTB.jpg",
+    "titleZh": "硃色的面具",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/3a/11/568525_CZJlC.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -911,8 +912,8 @@
   },
   {
     "id": "anilist-199007",
-    "titleZh": "殭屍搜尋中",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/9e/00/586255_50t5r.jpg",
+    "titleZh": "#ゾンビさがしてます",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199007-VkhbbXfdugl8.png",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -935,8 +936,8 @@
   },
   {
     "id": "anilist-187316",
-    "titleZh": "幻想水滸伝",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx187316-DlSgopRQjK1Z.jpg",
+    "titleZh": "幻想水滸傳",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/ee/12/541538_77A05.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "動作",
@@ -992,7 +993,7 @@
   {
     "id": "anilist-209562",
     "titleZh": "バーテックスフォース",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209562-lWbqsEyIk8R1.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/42/ae/636512_PkQzc.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "機甲"
@@ -1000,8 +1001,8 @@
   },
   {
     "id": "anilist-200294",
-    "titleZh": "超巡！超條前輩",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/af/c1/593565_gjemm.jpg",
+    "titleZh": "超巡！超條先輩",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx200294-hZKIC5BJ8PSo.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "喜劇",
@@ -1022,7 +1023,7 @@
   {
     "id": "anilist-199594",
     "titleZh": "てつりょー！meet with 鉄道むすめ",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b6/e8/590553_41uhH.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199594-KyZW6uaMiQWg.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "日常"
@@ -1060,8 +1061,8 @@
   },
   {
     "id": "anilist-209642",
-    "titleZh": "劇場版 前橋魔女",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/57/b8/636680_5iXiE.jpg",
+    "titleZh": "劇場版 前橋ウィッチーズ ～魔女見習いのエモエモリーズ～",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209642-foqZyprbINhR.jpg",
     "yearSeason": "2026 秋",
     "genres": [
       "劇情",
@@ -1308,7 +1309,7 @@
   {
     "id": "anilist-128757",
     "titleZh": "感謝對戰。 ～大小姐才不玩格鬥遊戲～",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/a1/d3/325767_u3pvR.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128757-0YhOnKG6aRs1.png",
     "yearSeason": "2026 夏",
     "genres": [
       "劇情"
@@ -1317,7 +1318,7 @@
   {
     "id": "anilist-209983",
     "titleZh": "地獄模式 ～喜歡挑戰特殊成就的玩家在廢設定的異世界成為無雙～ 第2季",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/fa/0b/638151_4cZdo.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209983-goWdl95cx0cG.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "動作",
@@ -1367,7 +1368,7 @@
   {
     "id": "anilist-206521",
     "titleZh": "World is Dancing",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e5/4e/622633_7i5pC.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206521-ecJuDgjth84C.png",
     "yearSeason": "2026 夏",
     "genres": [
       "劇情"
@@ -1376,14 +1377,14 @@
   {
     "id": "anilist-211711",
     "titleZh": "僕のヒーローアカデミア I am a hero too",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx211711-Oy6R5cmGHLCL.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/02/59/646464_3uLOd.jpg",
     "yearSeason": "2026 夏",
     "genres": []
   },
   {
     "id": "anilist-209961",
-    "titleZh": "靠死亡遊戲混飯吃。 44:CLOUDY BEACH",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/80/d8/638185_4Ni0n.jpg",
+    "titleZh": "死亡遊戱で飯を食う。44:CLOUDY BEACH",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx209961-EKMAWTp299Kt.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "動作",
@@ -1406,8 +1407,8 @@
   },
   {
     "id": "anilist-197178",
-    "titleZh": "航海王 女英雄們的故事",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b1/dd/577191_mjqET.jpg",
+    "titleZh": "ONE PIECE HEROINES",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx197178-Ui8PY9HQbNgu.jpg",
     "yearSeason": "2026 夏",
     "genres": []
   },
@@ -1423,8 +1424,8 @@
   },
   {
     "id": "anilist-199748",
-    "titleZh": "ここは俺に任せて先に行けと言ってから１０年がたったら伝説になっていた。",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199748-PAFk9pGSUmFL.png",
+    "titleZh": "『你們先走我斷後』，於是10年後我成為了傳說",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/2c/93/590786_66lw7.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "動作",
@@ -1456,7 +1457,7 @@
   {
     "id": "anilist-204466",
     "titleZh": "少女怪獸焦糖戀心",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e3/74/617123_g83Q7.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx204466-3aANb2egzoBk.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "喜劇",
@@ -1594,7 +1595,7 @@
   {
     "id": "anilist-199066",
     "titleZh": "花織同學轉生後還是想幹架",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/59/84/587109_q1iCs.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199066-o0aQNC5lcxFr.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "喜劇",
@@ -1615,7 +1616,7 @@
   {
     "id": "anilist-198709",
     "titleZh": "奇招百出的維多利亞",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/04/5b/584641_xl2El.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx198709-KnZCqdH7fu3F.png",
     "yearSeason": "2026 夏",
     "genres": [
       "動作",
@@ -1626,8 +1627,8 @@
   },
   {
     "id": "anilist-201667",
-    "titleZh": "文豪ストレイドッグス わん！２",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx201667-5VIyzugCtcKs.jpg",
+    "titleZh": "文豪野犬 汪！第二季",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/c2/c8/603352_n5RgE.jpg",
     "yearSeason": "2026 夏",
     "genres": [
       "喜劇",
@@ -2175,7 +2176,8 @@
       "劇情",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -2477,7 +2479,8 @@
       "冒險",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -2877,7 +2880,8 @@
       "愛情",
       "科幻",
       "日常",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -3109,7 +3113,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -3167,7 +3172,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "運動"
+      "運動",
+      "紳士"
     ]
   },
   {
@@ -3547,7 +3553,7 @@
   {
     "id": "anilist-178433",
     "titleZh": "異世界默示錄麥諾格拉～從毀滅文明開始征服世界～",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/f5/b1/500825_i02ef.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx178433-8KzNsjTmdAvw.jpg",
     "yearSeason": "2025 夏",
     "genres": [
       "動作",
@@ -3571,7 +3577,7 @@
   {
     "id": "anilist-181841",
     "titleZh": "小城日常",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b2/c2/514358_oRoZH.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx181841-R6fB3bmU5eOE.jpg",
     "yearSeason": "2025 夏",
     "genres": [
       "喜劇",
@@ -3597,7 +3603,8 @@
       "動作",
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -3613,7 +3620,7 @@
   {
     "id": "anilist-179885",
     "titleZh": "被驅逐出勇者隊伍的白魔導師，被 S 級冒險者撿到",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/19/38/505793_HF3Ug.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx179885-m1nu1QvnRmII.jpg",
     "yearSeason": "2025 夏",
     "genres": [
       "動作",
@@ -3634,7 +3641,7 @@
   {
     "id": "anilist-155838",
     "titleZh": "強者的新傳說",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ad/ac/404909_9HOfw.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx155838-0zx6MTeoo5sk.jpg",
     "yearSeason": "2025 夏",
     "genres": [
       "冒險",
@@ -4170,7 +4177,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -4203,7 +4211,8 @@
       "動作",
       "劇情",
       "奇幻",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -4249,7 +4258,8 @@
       "福利",
       "機甲",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -4503,7 +4513,8 @@
       "劇情",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -4581,7 +4592,8 @@
       "喜劇",
       "福利",
       "魔法少女",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -4676,7 +4688,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -4924,7 +4937,8 @@
     "yearSeason": "2024 冬",
     "genres": [
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -5211,7 +5225,7 @@
   {
     "id": "anilist-168139",
     "titleZh": "成為名留歷史的壞女人吧",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/6b/ca/449567_uN5U8.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx168139-nGLXIdSksKCI.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "喜劇",
@@ -5235,7 +5249,7 @@
   {
     "id": "anilist-165790",
     "titleZh": "聽說你們要結婚！？",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/30/50/429305_yRkyp.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx165790-OwIZI9ArGR4Q.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "愛情",
@@ -5420,7 +5434,7 @@
   {
     "id": "anilist-171642",
     "titleZh": "MF GHOST 燃油車鬥魂 第二季",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b7/56/470738_44EQk.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171642-Tj5KCJPILuUN.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "運動"
@@ -5439,7 +5453,7 @@
   {
     "id": "anilist-171025",
     "titleZh": "魔法光源股份有限公司",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/9f/fd/467641_q40fo.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx171025-alBpVzKrgy1b.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "動作",
@@ -5462,7 +5476,7 @@
   {
     "id": "anilist-169258",
     "titleZh": "青之壬生浪",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e3/0d/454630_ZT8uF.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx169258-kj8qoomfAKsB.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "劇情"
@@ -5531,7 +5545,7 @@
   {
     "id": "anilist-107372",
     "titleZh": "當不成魔法師的女孩",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/d2/4d/265391_lW0Qi.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx107372-jRO0pY1kIRLl.jpg",
     "yearSeason": "2024 秋",
     "genres": [
       "奇幻"
@@ -5947,7 +5961,8 @@
       "喜劇",
       "劇情",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -6067,7 +6082,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -7020,7 +7036,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -7097,7 +7114,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -8096,7 +8114,7 @@
   {
     "id": "anilist-156040",
     "titleZh": "成為悲劇元兇的最強異端，最後頭目女王為了人民犧牲奉獻",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/3a/2b/406307_XOXhn.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx156040-qWlfbAk6GJJR.png",
     "yearSeason": "2023 夏",
     "genres": [
       "喜劇",
@@ -8133,7 +8151,7 @@
   {
     "id": "anilist-163327",
     "titleZh": "五等分的新娘∽",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/54/68/492352_4dkjc.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx163327-xBQznOwq6emq.jpg",
     "yearSeason": "2023 夏",
     "genres": [
       "劇情",
@@ -8143,8 +8161,8 @@
   },
   {
     "id": "anilist-146646",
-    "titleZh": "刃牙道",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/71/5f/487716_aoTuT.jpg",
+    "titleZh": "範馬刃牙 シーズン２",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146646-RMrHipfzvfTM.jpg",
     "yearSeason": "2023 夏",
     "genres": [
       "動作",
@@ -8154,7 +8172,7 @@
   {
     "id": "anilist-149883",
     "titleZh": "能幹貓今天也憂鬱",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b2/54/384672_mkgkn.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx149883-D2LSB7hm5bhv.png",
     "yearSeason": "2023 夏",
     "genres": [
       "喜劇",
@@ -8177,7 +8195,7 @@
   {
     "id": "anilist-150972",
     "titleZh": "白聖女與黑牧師",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/0f/0b/387822_nHUhn.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx150972-3gNJvsyu7lwP.png",
     "yearSeason": "2023 夏",
     "genres": [
       "喜劇",
@@ -8189,7 +8207,7 @@
   {
     "id": "anilist-153339",
     "titleZh": "甜點轉生",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/4d/86/347942_34Qor.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153339-u8i4Sc28U6En.jpg",
     "yearSeason": "2023 夏",
     "genres": [
       "動作",
@@ -8213,7 +8231,7 @@
   {
     "id": "anilist-162893",
     "titleZh": "萊莎的鍊金工房 ～常闇女王與秘密藏身處～",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/bb/bf/425236_3CtyP.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx162893-qDZDzL4jJ03c.jpg",
     "yearSeason": "2023 夏",
     "genres": [
       "動作",
@@ -8665,7 +8683,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -8906,7 +8925,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -9279,7 +9299,7 @@
   {
     "id": "anilist-101705",
     "titleZh": "地球外少年少女",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101705-bpXMRKKyzqg5.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/3f/e4/247182_0l0eD.jpg",
     "yearSeason": "2022 冬",
     "genres": [
       "冒險",
@@ -9289,7 +9309,7 @@
   {
     "id": "anilist-128828",
     "titleZh": "少女前線",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx128828-Lhulr8Niitey.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/70/ac/325982_CunTN.jpg",
     "yearSeason": "2022 冬",
     "genres": [
       "動作",
@@ -9331,7 +9351,7 @@
   {
     "id": "anilist-102891",
     "titleZh": "鹿王",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx102891-lVsBWszCtTxd.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/ef/d4/250479_kuvhk.jpg",
     "yearSeason": "2022 冬",
     "genres": [
       "動作",
@@ -9402,7 +9422,7 @@
   {
     "id": "anilist-123752",
     "titleZh": "莎木",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx123752-T6yktnBk8AeY.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/68/09/314366_sqHL8.jpg",
     "yearSeason": "2022 冬",
     "genres": [
       "動作",
@@ -9730,7 +9750,8 @@
       "劇情",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -9837,7 +9858,8 @@
       "動作",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -9898,7 +9920,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -9936,7 +9959,8 @@
       "劇情",
       "奇幻",
       "恐怖",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -10044,7 +10068,8 @@
       "動作",
       "劇情",
       "心理",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -10376,7 +10401,8 @@
       "冒險",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -11103,7 +11129,8 @@
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -11638,7 +11665,8 @@
       "冒險",
       "奇幻",
       "機甲",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -12546,7 +12574,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -13831,7 +13860,8 @@
       "動作",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -13928,7 +13958,8 @@
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -13985,7 +14016,8 @@
       "動作",
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -14223,7 +14255,7 @@
   {
     "id": "anilist-109287",
     "titleZh": "安達與島村",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/0f/a4/282372_pqp0S.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109287-yHDlERSIEjsL.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "愛情",
@@ -14233,7 +14265,7 @@
   {
     "id": "anilist-115740",
     "titleZh": "眾神眷顧的男人",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/8a/1e/300685_bBjjU.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx115740-IRwSQo96Qs2Q.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "冒險",
@@ -14256,7 +14288,7 @@
   {
     "id": "anilist-110355",
     "titleZh": "黃金神威 第三期",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/72/f9/285901_94tQr.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110355-yXOXm5tr8kgr.png",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
@@ -14328,8 +14360,8 @@
   },
   {
     "id": "anilist-126287",
-    "titleZh": "PUPARIA",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx126287-dgh91tFWDlPg.png",
+    "titleZh": "蛹夢",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/4e/14/320147_m3zc0.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "奇幻",
@@ -14338,8 +14370,8 @@
   },
   {
     "id": "anilist-121034",
-    "titleZh": "約會大作戰 赤黑新章：紅或白",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/7d/d1/310178_fmSFj.jpg",
+    "titleZh": "デート・ア・バレット ナイトメア・オア・クイーン",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121034-tdLiWDs07tOi.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "科幻"
@@ -14348,11 +14380,12 @@
   {
     "id": "anilist-122137",
     "titleZh": "土下座跪求給看",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/82/5d/311600_p49yd.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx122137-wqDaJxQWVXaa.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -14369,7 +14402,7 @@
   {
     "id": "anilist-116226",
     "titleZh": "你是彼方",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116226-Pvs82HwToipq.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/2d/39/301462_42AvZ.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "奇幻"
@@ -14378,7 +14411,7 @@
   {
     "id": "anilist-114099",
     "titleZh": "勇者鬥惡龍 達爾大冒險",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/46/61/296980_z8TBB.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114099-LRnlm1t6LE5o.png",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
@@ -14399,7 +14432,7 @@
   {
     "id": "anilist-118376",
     "titleZh": "王之逆襲:意志的繼承者",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/fe/ed/305621_yysau.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx118376-V0mSf2LG0OOs.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
@@ -14420,7 +14453,7 @@
   {
     "id": "anilist-112930",
     "titleZh": "愛情可以分割嗎？",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b3/93/293887_7u7G5.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112930-G15f7gmpXPs3.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "愛情"
@@ -14439,7 +14472,7 @@
   {
     "id": "anilist-116173",
     "titleZh": "戰翼的希格德莉法",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ec/05/301369_Yyp7J.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx116173-1oLcZkw6lkvM.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
@@ -14501,7 +14534,7 @@
   {
     "id": "anilist-117755",
     "titleZh": "光之戰記 -ZUERST-",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/34/90/241267_g7zl4.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx117755-feOzwxzB9gEk.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
@@ -14511,7 +14544,7 @@
   {
     "id": "anilist-114263",
     "titleZh": "鐵路浪漫譚",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114263-A1mhjXwElS78.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/a4/32/297340_20R22.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "日常"
@@ -14530,13 +14563,14 @@
   },
   {
     "id": "anilist-103119",
-    "titleZh": "第501統合戦闘航空団 ストライクウィッチーズ ROAD to BERLIN",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx103119-5x83l4nwlloI.jpg",
+    "titleZh": "強襲魔女 通往柏林之路",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/39/ad/253046_IjUfm.jpg",
     "yearSeason": "2020 秋",
     "genres": [
       "動作",
       "福利",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -14720,7 +14754,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -14754,7 +14789,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -14876,7 +14912,7 @@
   {
     "id": "anilist-108941",
     "titleZh": "賽馬娘四格",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/58/85/269389_vhLZ0.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108941-QDNpgawkxytg.png",
     "yearSeason": "2020 夏",
     "genres": [
       "喜劇",
@@ -14902,7 +14938,8 @@
       "動作",
       "冒險",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -14940,7 +14977,7 @@
   {
     "id": "anilist-120180",
     "titleZh": "忍者收藏",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b120180-NSws10rGLbIZ.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/f4/74/308997_Ajm9B.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "恐怖"
@@ -14987,7 +15024,7 @@
   {
     "id": "anilist-113669",
     "titleZh": "電影哆啦A夢: 大雄的新恐龍",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/3e/f5/285759_z4dsD.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113669-HwhNxy2BQmqR.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "冒險",
@@ -15009,7 +15046,7 @@
   {
     "id": "anilist-112258",
     "titleZh": "超普通都市柏傳說R",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112258-euCskvIy0fix.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/33/fa/310150_G3t37.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "喜劇",
@@ -15018,8 +15055,8 @@
   },
   {
     "id": "anilist-123464",
-    "titleZh": "租借女友 x 妙廟美少女 聯動迷你動畫",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e5/97/451644_lllll.jpg",
+    "titleZh": "彼女、お借りします コラボミニアニメーション",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b123464-IDRajV9Vikko.png",
     "yearSeason": "2020 夏",
     "genres": [
       "喜劇"
@@ -15027,8 +15064,8 @@
   },
   {
     "id": "anilist-162800",
-    "titleZh": "俏皮小花仙",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/7c/24/35345_ApgGz.jpg",
+    "titleZh": "彼女、お借りします デートムービー",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx162800-WYuKTx8iBwHB.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "喜劇",
@@ -15038,8 +15075,8 @@
   },
   {
     "id": "anilist-121684",
-    "titleZh": "巨神と氷華の城",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx121684-VOEm4ipW5uoA.png",
+    "titleZh": "巨神與冰華之城",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/c1/59/303553_SG3u5.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "劇情",
@@ -15049,8 +15086,8 @@
   },
   {
     "id": "anilist-111312",
-    "titleZh": "蠟筆小新：激戰！塗鴉王國和約四位勇士",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/07/57/291038_J0Yqc.jpg",
+    "titleZh": "映畫クレヨンしんちゃん 激突！ラクガキングダムとほぼ四人の勇者",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111312-kK2XqCwTn7zK.jpg",
     "yearSeason": "2020 夏",
     "genres": [
       "喜劇",
@@ -15322,7 +15359,8 @@
       "動作",
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -15346,13 +15384,14 @@
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
     "id": "anilist-109019",
     "titleZh": "放學後堤防日誌",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/97/b6/280678_rQ75K.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109019-xlrVQRdo1EQi.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "喜劇",
@@ -15372,7 +15411,7 @@
   {
     "id": "anilist-109856",
     "titleZh": "LISTENERS",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/3d/0f/249619_YyBvf.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109856-zDYLvuF4Vuno.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "動作",
@@ -15430,7 +15469,7 @@
   {
     "id": "anilist-114411",
     "titleZh": "文豪與鍊金術師～審判的齒輪～",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114411-PnXaweOf99xA.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/14/b1/297208_H25dc.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "動作",
@@ -15464,7 +15503,7 @@
   {
     "id": "anilist-110130",
     "titleZh": "球詠",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx110130-QqvIQ5B2X3EJ.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/53/51/285117_gGhhg.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "日常",
@@ -15485,7 +15524,7 @@
   {
     "id": "anilist-113570",
     "titleZh": "社長，戰鬥的時間到了！",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113570-c0YmZUj7f5eH.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/03/1f/295707_jdddR.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "動作",
@@ -15546,7 +15585,7 @@
   {
     "id": "anilist-111500",
     "titleZh": "新櫻花大戰 the Animation",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111500-YqqWk16db7FX.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/e3/6e/290630_DfdRF.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "動作",
@@ -15568,7 +15607,7 @@
   {
     "id": "anilist-115186",
     "titleZh": "別冊奧林匹克之環",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx115186-WZrskMhidMgg.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/d4/22/304183_A2sOo.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "喜劇",
@@ -15579,8 +15618,8 @@
   },
   {
     "id": "anilist-112302",
-    "titleZh": "メジャー2nd 第２シリーズ",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx112302-VZZnJ1NY0waA.jpg",
+    "titleZh": "棒球大聯盟2nd 第二季",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/d3/cb/292219_sZERu.jpg",
     "yearSeason": "2020 春",
     "genres": [
       "喜劇",
@@ -15736,7 +15775,8 @@
     "genres": [
       "劇情",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -15986,7 +16026,8 @@
       "動作",
       "心理",
       "科幻",
-      "驚悚"
+      "驚悚",
+      "紳士"
     ]
   },
   {
@@ -16481,7 +16522,8 @@
     "genres": [
       "動作",
       "福利",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -16643,7 +16685,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -16708,7 +16751,8 @@
     "yearSeason": "2019 秋",
     "genres": [
       "福利",
-      "運動"
+      "運動",
+      "紳士"
     ]
   },
   {
@@ -16987,7 +17031,8 @@
       "冒險",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -17481,7 +17526,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -17723,7 +17769,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -17970,7 +18017,8 @@
       "劇情",
       "恐怖",
       "心理",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -18158,7 +18206,7 @@
   {
     "id": "anilist-98549",
     "titleZh": "POP TEAM EPIC",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/29/26/363600_zBwnq.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98549-XfLyPhrP5Ors.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "喜劇"
@@ -18178,7 +18226,7 @@
   {
     "id": "anilist-100784",
     "titleZh": "銀魂. 銀之魂篇",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/1d/7c/232884_OIoro.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100784-7fWdiduBFr95.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
@@ -18190,7 +18238,7 @@
   {
     "id": "anilist-99940",
     "titleZh": "伊藤潤二Collection",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/19/b9/218453_s5qP9.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99940-pxsliSVHi0sj.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "劇情",
@@ -18213,7 +18261,7 @@
   {
     "id": "anilist-100332",
     "titleZh": "刻刻─時間暫停─",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/bb/43/228026_dy35F.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100332-5saXfqfB8nvF.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
@@ -18238,19 +18286,20 @@
   {
     "id": "anilist-98389",
     "titleZh": "牙鬥獸娘",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/a5/1a/210230_S71UE.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98389-xDRFlDQwu2I9.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
       "福利",
       "恐怖",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
     "id": "anilist-99734",
-    "titleZh": "だがしかし 2",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99734-21qxfb3txkAN.png",
+    "titleZh": "粗點心戰爭 第二季",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/84/d8/221490_4pO1s.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "喜劇",
@@ -18293,7 +18342,7 @@
   {
     "id": "anilist-100353",
     "titleZh": "路人超能100 特別篇【不為人知的奇蹟靈能者】",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100353-6dM62JCho2Yg.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/48/a6/228109_wb3bL.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
@@ -18304,7 +18353,7 @@
   {
     "id": "anilist-98439",
     "titleZh": "三顆星彩色冒險",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/83/52/211066_6cuj1.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98439-J6h5VEcZh9vK.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "喜劇",
@@ -18324,7 +18373,7 @@
   {
     "id": "anilist-97881",
     "titleZh": "百變小櫻Clear Card",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/44/ba/212240_YV39z.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97881-QGpBWNtdCxrZ.png",
     "yearSeason": "2018 冬",
     "genres": [
       "冒險",
@@ -18343,7 +18392,8 @@
       "動作",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -18358,8 +18408,8 @@
   },
   {
     "id": "anilist-101812",
-    "titleZh": "Code Geass 反叛的魯路修 I 興道",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/02/6a/199229_cHlVV.jpg",
+    "titleZh": "コードギアス 反逆のルルーシュⅡ 叛道",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101812-rCTRQhzHIryT.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
@@ -18384,7 +18434,7 @@
   {
     "id": "anilist-98747",
     "titleZh": "刀使之巫女",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ec/a3/215158_d4KeP.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx98747-HB9210l6MDmO.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "動作",
@@ -18450,13 +18500,14 @@
     "yearSeason": "2018 冬",
     "genres": [
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
     "id": "anilist-99476",
-    "titleZh": "飆速宅男 GLORY LINE",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/a4/2b/217629_SiXLz.jpg",
+    "titleZh": "弱蟲ペダルGLORY LINE",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx99476-iKxjBWYZmDYl.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "劇情",
@@ -18477,7 +18528,7 @@
   {
     "id": "anilist-99753",
     "titleZh": "酒鬼妹子",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ef/3e/221819_A52K3.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99753-qKguGSEIFZcx.jpg",
     "yearSeason": "2018 冬",
     "genres": [
       "喜劇",
@@ -18811,7 +18862,8 @@
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -19053,7 +19105,8 @@
     "genres": [
       "動作",
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -19225,7 +19278,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -19299,7 +19353,7 @@
   {
     "id": "anilist-100749",
     "titleZh": "未來的未來",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/a4/a8/215231_yN4D2.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100749-7Tptl7EAMAWH.jpg",
     "yearSeason": "2018 夏",
     "genres": [
       "冒險",
@@ -19312,7 +19366,7 @@
   {
     "id": "anilist-98658",
     "titleZh": "少女☆歌劇Revue Starlight",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/1e/41/294135_cvCcW.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98658-Xz8uliDO7dzZ.png",
     "yearSeason": "2018 夏",
     "genres": [
       "動作",
@@ -19335,7 +19389,7 @@
   {
     "id": "anilist-100556",
     "titleZh": "春原莊的管理人",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/91/41/230110_5tFWD.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100556-wmH1DPNTjklR.jpg",
     "yearSeason": "2018 夏",
     "genres": [
       "喜劇",
@@ -19346,7 +19400,7 @@
   {
     "id": "anilist-100714",
     "titleZh": "邪神與廚二病少女",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/cb/30/272188_DPj3G.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100714-1glYB8znGJ5W.png",
     "yearSeason": "2018 夏",
     "genres": [
       "喜劇",
@@ -19506,7 +19560,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -19728,7 +19783,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -19999,7 +20055,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -20014,8 +20071,8 @@
   },
   {
     "id": "anilist-101016",
-    "titleZh": "伊藤潤二驚選集",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/19/b9/218453_s5qP9.jpg",
+    "titleZh": "伊藤潤二「コレクション」富江",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b101016-VM4HXz6S5myf.jpg",
     "yearSeason": "2018 春",
     "genres": [
       "劇情",
@@ -20037,7 +20094,7 @@
   {
     "id": "anilist-97873",
     "titleZh": "異世界居酒屋～古都阿伊特力亞的居酒屋「阿信」",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/18/30/198894_5ORWq.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx97873-jYQ3dPoaOLxX.jpg",
     "yearSeason": "2018 春",
     "genres": [
       "喜劇",
@@ -20048,7 +20105,7 @@
   {
     "id": "anilist-100978",
     "titleZh": "鬼太郎 6",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/30/71/234531_u3ujU.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100978-2BLQeMknulmo.jpg",
     "yearSeason": "2018 春",
     "genres": [
       "喜劇",
@@ -20070,7 +20127,7 @@
   {
     "id": "anilist-101002",
     "titleZh": "平交道時間",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/f4/c7/236103_kuvkS.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx101002-tBiVbnDLzfb6.jpg",
     "yearSeason": "2018 春",
     "genres": [
       "喜劇",
@@ -20091,7 +20148,7 @@
   {
     "id": "anilist-21879",
     "titleZh": "閃電十一人 戰神的天秤",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/77/32/185789_jPBVp.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21879-h5RaJDRqPg8N.jpg",
     "yearSeason": "2018 春",
     "genres": [
       "動作",
@@ -20231,7 +20288,8 @@
       "冒險",
       "奇幻",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -20243,7 +20301,8 @@
       "劇情",
       "福利",
       "心理",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -20323,7 +20382,8 @@
       "劇情",
       "福利",
       "音樂",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -20578,7 +20638,8 @@
     "genres": [
       "動作",
       "心理",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -21575,7 +21636,8 @@
     "genres": [
       "劇情",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -21651,7 +21713,8 @@
     "genres": [
       "喜劇",
       "奇幻",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -21758,7 +21821,7 @@
   {
     "id": "anilist-97939",
     "titleZh": "時間支配者",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97939-IyggRBP9r9i6.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/3f/94/165805_5RGvI.jpg",
     "yearSeason": "2017 夏",
     "genres": [
       "動作",
@@ -21805,8 +21868,8 @@
   },
   {
     "id": "anilist-100168",
-    "titleZh": "ブレードランナー ブラックアウト 2022",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx100168-JD14ew2Ie10c.jpg",
+    "titleZh": "銀翼殺手：2022大斷電",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/e0/63/225801_Khz9n.jpg",
     "yearSeason": "2017 夏",
     "genres": [
       "科幻",
@@ -22041,7 +22104,8 @@
       "動作",
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -22126,7 +22190,8 @@
     "genres": [
       "動作",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -22658,7 +22723,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -22765,7 +22831,8 @@
       "動作",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -22777,7 +22844,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -22956,7 +23024,8 @@
     "yearSeason": "2016 冬",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -23164,19 +23233,20 @@
   {
     "id": "anilist-21815",
     "titleZh": "噬血狂襲 II",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/43/d4/182239_LWzC1.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21815-q8Jm7tx70N0H.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
     "id": "anilist-97716",
     "titleZh": "星期一的豐滿",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/f1/31/194877_mu6PM.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx97716-KEnqtszrv2vw.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "福利",
@@ -23186,7 +23256,7 @@
   {
     "id": "anilist-21838",
     "titleZh": "終末的伊澤塔",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/2c/15/184840_1kbri.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21838-v7GiILDrph5t.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "動作",
@@ -23208,7 +23278,7 @@
   {
     "id": "anilist-21340",
     "titleZh": "魔法少女育成計劃",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/cc/c4/145946_Q8CBE.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21340-0fOhJK8Qynmy.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "動作",
@@ -23274,13 +23344,14 @@
     "yearSeason": "2016 秋",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
     "id": "anilist-21703",
     "titleZh": "啟航吧！編舟計畫",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21703-rXiXsRgiIO12.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/71/ff/174142_HirNZ.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "劇情",
@@ -23290,8 +23361,8 @@
   },
   {
     "id": "anilist-21749",
-    "titleZh": "機動戰士高達 鐵血的奧爾芬斯 第二季",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/97/af/170191_0uTwd.jpg",
+    "titleZh": "機動戦士ガンダム 鉄血のオルフェンズ 2",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21749-tO6zfDKFesgl.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "動作",
@@ -23327,7 +23398,7 @@
   {
     "id": "anilist-21757",
     "titleZh": "喜歡上你的那瞬間",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21757-zH78HtS4b0GU.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/6d/05/175543_42ITD.jpg",
     "yearSeason": "2016 秋",
     "genres": [
       "劇情",
@@ -23364,7 +23435,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -23413,7 +23485,8 @@
       "恐怖",
       "心理",
       "科幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -23501,7 +23574,8 @@
     "genres": [
       "動作",
       "福利",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -23780,7 +23854,7 @@
   {
     "id": "anilist-21378",
     "titleZh": "魔裝學園H×H",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21378-83u2Jo9aACxx.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/d6/1d/147438_0R2Xe.jpg",
     "yearSeason": "2016 夏",
     "genres": [
       "動作",
@@ -23788,7 +23862,8 @@
       "福利",
       "奇幻",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -24056,7 +24131,7 @@
   {
     "id": "anilist-21782",
     "titleZh": "腐男子高中生活",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/21782-i8wLBjK9ccfY.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/6c/35/180211_pxT0b.jpg",
     "yearSeason": "2016 夏",
     "genres": [
       "喜劇",
@@ -24071,7 +24146,8 @@
     "genres": [
       "動作",
       "科幻",
-      "驚悚"
+      "驚悚",
+      "紳士"
     ]
   },
   {
@@ -24082,7 +24158,8 @@
     "genres": [
       "冒險",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -24304,7 +24381,8 @@
     "yearSeason": "2016 春",
     "genres": [
       "動作",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -24753,7 +24831,8 @@
       "動作",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -24855,7 +24934,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -24929,7 +25009,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -24973,7 +25054,8 @@
     "genres": [
       "動作",
       "機甲",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -25002,7 +25084,8 @@
     "yearSeason": "2015 冬",
     "genres": [
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -25204,7 +25287,8 @@
     "genres": [
       "動作",
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -25214,7 +25298,8 @@
     "yearSeason": "2015 冬",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -25513,7 +25598,8 @@
       "福利",
       "奇幻",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -25637,7 +25723,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -25730,7 +25817,8 @@
     "genres": [
       "動作",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -25781,7 +25869,8 @@
       "懸疑",
       "心理",
       "科幻",
-      "驚悚"
+      "驚悚",
+      "紳士"
     ]
   },
   {
@@ -25825,7 +25914,8 @@
     "yearSeason": "2015 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -25848,7 +25938,8 @@
     "yearSeason": "2015 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -25892,7 +25983,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -26031,7 +26123,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -26213,7 +26306,8 @@
     "yearSeason": "2015 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -26225,7 +26319,8 @@
       "動作",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -26556,7 +26651,8 @@
     "genres": [
       "劇情",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -26612,7 +26708,8 @@
     "genres": [
       "動作",
       "劇情",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -26624,7 +26721,8 @@
       "動作",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -26869,7 +26967,8 @@
     "yearSeason": "2015 春",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -27075,7 +27174,8 @@
       "劇情",
       "奇幻",
       "恐怖",
-      "心理"
+      "心理",
+      "紳士"
     ]
   },
   {
@@ -27104,7 +27204,7 @@
   {
     "id": "anilist-20496",
     "titleZh": "世界征服～謀略之星～",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/64/3e/86072_e62pd.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20496-fTwlGOKd8OPb.jpg",
     "yearSeason": "2014 冬",
     "genres": [
       "動作",
@@ -27150,7 +27250,7 @@
   {
     "id": "anilist-20431",
     "titleZh": "鬼燈的冷徹",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/7a/e3/77188_zMiKm.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20431-01EHi0CpWKx0.png",
     "yearSeason": "2014 冬",
     "genres": [
       "喜劇",
@@ -27171,7 +27271,7 @@
   {
     "id": "anilist-20582",
     "titleZh": "中二病也要談戀愛！戀 Lite",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/41/83/91651_vpgN9.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20582-hCXj33Fmk07M.jpg",
     "yearSeason": "2014 冬",
     "genres": [
       "喜劇"
@@ -27211,7 +27311,7 @@
   {
     "id": "anilist-20533",
     "titleZh": "Buddy Complex",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/ab/3c/105214_VpWw5.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20533-uzmLvRDe7LBt.jpg",
     "yearSeason": "2014 冬",
     "genres": [
       "動作",
@@ -27236,8 +27336,8 @@
   },
   {
     "id": "anilist-20509",
-    "titleZh": "愚者信長",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b5/80/87625_kMGGz.jpg",
+    "titleZh": "ノブナガ ザ フール",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20509-clrgNqUsop9j.png",
     "yearSeason": "2014 冬",
     "genres": [
       "機甲",
@@ -27294,8 +27394,8 @@
   },
   {
     "id": "anilist-20053",
-    "titleZh": "WIZARD BARRISTERS〜辯魔士聖知",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/49/3e/80787_RJ6DD.jpg",
+    "titleZh": "ウィザード・バリスターズ 弁魔士セシル",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20053-PIdMAmmoFI6l.jpg",
     "yearSeason": "2014 冬",
     "genres": [
       "動作",
@@ -27337,8 +27437,8 @@
   },
   {
     "id": "anilist-20660",
-    "titleZh": "中二病也要談戀愛！劇場版 小鳥遊六花・改",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/fc/76/75521_e7hEp.jpg",
+    "titleZh": "映畫中二病でも戀がしたい!Lite",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20660-YHPDR9Cb9xv3.png",
     "yearSeason": "2014 冬",
     "genres": [
       "喜劇"
@@ -27357,13 +27457,14 @@
   },
   {
     "id": "anilist-20551",
-    "titleZh": "當不成勇者的我，只好認真找工作了。 OAD",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/7d/b7/83915_p7o83.jpg",
+    "titleZh": "勇者になれなかった俺はしぶしぶ就職を決意しました。OVA",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/20551.jpg",
     "yearSeason": "2014 冬",
     "genres": [
       "喜劇",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -27434,7 +27535,8 @@
     "genres": [
       "動作",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -27940,7 +28042,8 @@
     "genres": [
       "動作",
       "機甲",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -28009,7 +28112,8 @@
       "喜劇",
       "福利",
       "機甲",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -28231,8 +28335,8 @@
   },
   {
     "id": "anilist-20769",
-    "titleZh": "Let's Play 充滿任務的人生",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/b7/6a/460183_3FHfH.jpg",
+    "titleZh": "ノーゲーム・ノーライフ ミニ",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx20769-yn9crl5jlupz.jpg",
     "yearSeason": "2014 夏",
     "genres": [
       "喜劇",
@@ -28739,7 +28843,8 @@
       "劇情",
       "奇幻",
       "懸疑",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -28850,7 +28955,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -29077,7 +29183,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "機甲"
+      "機甲",
+      "紳士"
     ]
   },
   {
@@ -29133,7 +29240,8 @@
       "動作",
       "冒險",
       "喜劇",
-      "劇情"
+      "劇情",
+      "紳士"
     ]
   },
   {
@@ -29278,7 +29386,8 @@
       "劇情",
       "奇幻",
       "恐怖",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -29336,8 +29445,8 @@
   },
   {
     "id": "anilist-16005",
-    "titleZh": "THE UNLIMITED 兵部京介",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/95/ba/52484_UUXKX.jpg",
+    "titleZh": "絶対可憐チルドレン THE UNLIMITED 兵部京介",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16005-79QCNJTaNHqK.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "動作",
@@ -29378,8 +29487,8 @@
   },
   {
     "id": "anilist-14515",
-    "titleZh": "蜜柑船",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e5/3f/258988_31bnA.jpg",
+    "titleZh": "ささみさん@がんばらない",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx14515-sKyS4qxbaS7y.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "喜劇",
@@ -29392,7 +29501,7 @@
   {
     "id": "anilist-15109",
     "titleZh": "Q弟偵探因幡",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/75/aa/46829_Eqi0c.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15109-zGeYvSvJmgA2.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "動作",
@@ -29434,13 +29543,14 @@
   {
     "id": "anilist-14283",
     "titleZh": "Vividred Operation",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/9e/96/41245_RIK57.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx14283-kLbZyR6Km5mA.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "動作",
       "福利",
       "魔法少女",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -29479,7 +29589,7 @@
   {
     "id": "anilist-15195",
     "titleZh": "黑塔利亞 第5期",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/5e/13/46012_up1i9.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/15195.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "喜劇"
@@ -29493,7 +29603,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -29507,8 +29618,8 @@
   },
   {
     "id": "anilist-16419",
-    "titleZh": "在地下城尋求邂逅是否搞錯了什麼 外傳 劍姬神聖譚",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/78/18/172155_CZ1gc.jpg",
+    "titleZh": "ドキドキ! プリキュア",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16419-rWEwkEDnKYQ0.jpg",
     "yearSeason": "2013 冬",
     "genres": [
       "奇幻",
@@ -29780,7 +29891,8 @@
       "動作",
       "福利",
       "奇幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -29907,7 +30019,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -30113,7 +30226,8 @@
       "劇情",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -30124,7 +30238,8 @@
     "genres": [
       "福利",
       "愛情",
-      "運動"
+      "運動",
+      "紳士"
     ]
   },
   {
@@ -30266,7 +30381,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -30992,7 +31108,8 @@
     "genres": [
       "喜劇",
       "劇情",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -31050,7 +31167,7 @@
   {
     "id": "anilist-17082",
     "titleZh": "AIURA",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx17082-aibgI1fdiFzS.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/ab/a2/56159_TN6R3.jpg",
     "yearSeason": "2013 春",
     "genres": [
       "喜劇",
@@ -31082,7 +31199,7 @@
   {
     "id": "anilist-16355",
     "titleZh": "斷裁分離的罪惡之剪",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16355-hZ0rDhXEbsDl.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/81/4a/54705_g0zBb.jpg",
     "yearSeason": "2013 春",
     "genres": [
       "動作",
@@ -31093,13 +31210,14 @@
   {
     "id": "anilist-15377",
     "titleZh": "百花繚亂 SAMURAI BRIDE",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx15377-PHthXBKOeheF.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/af/bc/48055_sI90L.jpg",
     "yearSeason": "2013 春",
     "genres": [
       "動作",
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -31132,7 +31250,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -31478,7 +31597,8 @@
       "劇情",
       "奇幻",
       "恐怖",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -31614,7 +31734,8 @@
       "恐怖",
       "懸疑",
       "心理",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -32097,7 +32218,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -32108,7 +32230,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -32216,7 +32339,8 @@
     "yearSeason": "2012 秋",
     "genres": [
       "動作",
-      "冒險"
+      "冒險",
+      "紳士"
     ]
   },
   {
@@ -32333,7 +32457,8 @@
       "福利",
       "恐怖",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -32345,7 +32470,8 @@
       "動作",
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -32494,7 +32620,8 @@
     "genres": [
       "動作",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -32506,7 +32633,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -32628,7 +32756,8 @@
       "劇情",
       "奇幻",
       "恐怖",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -32649,7 +32778,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -32725,7 +32855,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -32738,7 +32869,8 @@
       "福利",
       "恐怖",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -32817,7 +32949,8 @@
     "yearSeason": "2012 夏",
     "genres": [
       "動作",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -32870,7 +33003,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -33000,7 +33134,8 @@
     "yearSeason": "2012 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -33080,7 +33215,8 @@
       "福利",
       "恐怖",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -33114,7 +33250,8 @@
     "yearSeason": "2012 春",
     "genres": [
       "動作",
-      "冒險"
+      "冒險",
+      "紳士"
     ]
   },
   {
@@ -33191,7 +33328,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -33260,7 +33398,8 @@
       "恐怖",
       "愛情",
       "科幻",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -33275,7 +33414,8 @@
       "劇情",
       "福利",
       "心理",
-      "驚悚"
+      "驚悚",
+      "紳士"
     ]
   },
   {
@@ -33363,7 +33503,8 @@
     "yearSeason": "2012 春",
     "genres": [
       "動作",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -33480,7 +33621,8 @@
       "動作",
       "冒險",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -33509,7 +33651,8 @@
     "yearSeason": "2012 春",
     "genres": [
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -33712,7 +33855,8 @@
     "genres": [
       "喜劇",
       "愛情",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -33881,7 +34025,8 @@
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/12449.jpg",
     "yearSeason": "2011 冬",
     "genres": [
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -34082,7 +34227,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -34164,7 +34310,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -34208,7 +34355,8 @@
     "yearSeason": "2011 秋",
     "genres": [
       "動作",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -34233,7 +34381,8 @@
       "喜劇",
       "劇情",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -34352,7 +34501,8 @@
     "yearSeason": "2011 秋",
     "genres": [
       "劇情",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -34498,7 +34648,8 @@
     "genres": [
       "動作",
       "心理",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -34649,7 +34800,8 @@
     "yearSeason": "2011 秋",
     "genres": [
       "動作",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -34659,7 +34811,8 @@
     "yearSeason": "2011 秋",
     "genres": [
       "動作",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -34703,7 +34856,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -34878,8 +35032,8 @@
   },
   {
     "id": "anilist-10805",
-    "titleZh": "只有神知道的世界 四人與偶像",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/56/58/23170_838o6.jpg",
+    "titleZh": "神のみぞ知るセカイ　４人とアイドル",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10805.jpg",
     "yearSeason": "2011 夏",
     "genres": [
       "喜劇",
@@ -34899,8 +35053,8 @@
   },
   {
     "id": "anilist-11077",
-    "titleZh": "皇家國教騎士團外傳：THE DAWN",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/19/8c/27924_Rl554.jpg",
+    "titleZh": "HELLSING：THE DAWN",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/11077.jpg",
     "yearSeason": "2011 夏",
     "genres": [
       "動作",
@@ -34917,7 +35071,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -34943,7 +35098,7 @@
   {
     "id": "anilist-10491",
     "titleZh": "寒蟬鳴泣之時 煌",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10491-v4eyoGFyXQR8.jpg",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/35/74/14429_Dt8id.jpg",
     "yearSeason": "2011 夏",
     "genres": [
       "喜劇",
@@ -34956,8 +35111,8 @@
   },
   {
     "id": "anilist-10294",
-    "titleZh": "トワノクオン 第1章 泡沫の花弁",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10294.jpg",
+    "titleZh": "永遠之久遠 第一章 泡沫的花瓣",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/e5/cb/13343_NDSlM.jpg",
     "yearSeason": "2011 夏",
     "genres": [
       "動作",
@@ -34973,7 +35128,8 @@
     "genres": [
       "動作",
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -34989,13 +35145,14 @@
   },
   {
     "id": "anilist-10611",
-    "titleZh": "あーるじゅうご",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10611-NRtcece5MQTG.jpg",
+    "titleZh": "映畫かいけつゾロリ まもるぜ！きょうりゅうのたまご",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/b8/d7/414420_oiv2I.jpg",
     "yearSeason": "2011 夏",
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -35079,7 +35236,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -35121,7 +35279,8 @@
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/10196.jpg",
     "yearSeason": "2011 夏",
     "genres": [
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -35413,8 +35572,8 @@
   },
   {
     "id": "anilist-10155",
-    "titleZh": "文豪野犬 汪！",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/09/50/308961_qAV1m.jpg",
+    "titleZh": "ドッグデイズ",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10155-e5d9PukNkE8D.jpg",
     "yearSeason": "2011 春",
     "genres": [
       "動作",
@@ -35437,7 +35596,7 @@
   {
     "id": "anilist-10079",
     "titleZh": "架向星空之橋",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/c9/74/10609_304VY.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx10079-NhSIefVJjprE.jpg",
     "yearSeason": "2011 春",
     "genres": [
       "福利",
@@ -35446,8 +35605,8 @@
   },
   {
     "id": "anilist-9926",
-    "titleZh": "劇場版 鏈鋸人 蕾塞篇",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/e0/d8/470660_uLY5M.jpg",
+    "titleZh": "世界一初戀 TV",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx9926-AhRNkKBBbsNq.png",
     "yearSeason": "2011 春",
     "genres": [
       "喜劇",
@@ -35515,7 +35674,8 @@
     "genres": [
       "動作",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -35569,7 +35729,8 @@
       "劇情",
       "福利",
       "心理",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -35720,7 +35881,8 @@
       "動作",
       "喜劇",
       "福利",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -35752,7 +35914,8 @@
     "genres": [
       "動作",
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -35807,7 +35970,8 @@
     "genres": [
       "動作",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -35852,7 +36016,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -35877,7 +36042,8 @@
       "喜劇",
       "福利",
       "奇幻",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -35889,7 +36055,8 @@
       "動作",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -35976,7 +36143,8 @@
     "yearSeason": "2010 冬",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -35999,7 +36167,8 @@
       "劇情",
       "奇幻",
       "魔法少女",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -36032,7 +36201,8 @@
     "yearSeason": "2010 冬",
     "genres": [
       "喜劇",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -36042,7 +36212,8 @@
     "yearSeason": "2010 冬",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -36169,7 +36340,8 @@
     "yearSeason": "2010 冬",
     "genres": [
       "動作",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -36445,7 +36617,8 @@
       "動作",
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -36541,7 +36714,8 @@
     "yearSeason": "2010 秋",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -36575,7 +36749,8 @@
       "動作",
       "冒險",
       "心理",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -36649,7 +36824,8 @@
       "動作",
       "喜劇",
       "福利",
-      "運動"
+      "運動",
+      "紳士"
     ]
   },
   {
@@ -36734,7 +36910,8 @@
     "genres": [
       "動作",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -36789,7 +36966,8 @@
       "動作",
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -36838,7 +37016,8 @@
       "福利",
       "恐怖",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -36907,7 +37086,8 @@
       "動作",
       "冒險",
       "劇情",
-      "驚悚"
+      "驚悚",
+      "紳士"
     ]
   },
   {
@@ -36970,7 +37150,8 @@
     "genres": [
       "動作",
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -36982,7 +37163,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -37057,7 +37239,8 @@
     "genres": [
       "動作",
       "福利",
-      "科幻"
+      "科幻",
+      "紳士"
     ]
   },
   {
@@ -37120,7 +37303,8 @@
       "劇情",
       "福利",
       "愛情",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -37150,7 +37334,8 @@
     "yearSeason": "2010 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37172,7 +37357,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -37194,7 +37380,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "超自然"
+      "超自然",
+      "紳士"
     ]
   },
   {
@@ -37237,7 +37424,8 @@
     "yearSeason": "2010 夏",
     "genres": [
       "冒險",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -37249,7 +37437,8 @@
       "動作",
       "冒險",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -37270,7 +37459,8 @@
     "yearSeason": "2010 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37291,7 +37481,8 @@
     "yearSeason": "2010 夏",
     "genres": [
       "喜劇",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37417,7 +37608,8 @@
       "喜劇",
       "福利",
       "愛情",
-      "日常"
+      "日常",
+      "紳士"
     ]
   },
   {
@@ -37429,7 +37621,8 @@
       "動作",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -37471,7 +37664,8 @@
     "genres": [
       "喜劇",
       "福利",
-      "愛情"
+      "愛情",
+      "紳士"
     ]
   },
   {
@@ -37542,7 +37736,7 @@
   {
     "id": "anilist-6895",
     "titleZh": "薄櫻鬼",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/85/26/4315_9cksk.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6895-S4QTn9uPlVrL.png",
     "yearSeason": "2010 春",
     "genres": [
       "動作",
@@ -37575,8 +37769,8 @@
   },
   {
     "id": "anilist-8479",
-    "titleZh": "黑塔利亞 第3期",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/72/30/4450_7t777.jpg",
+    "titleZh": "ヘタリア Ｗorld Ｓeries",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b8479-dwf4MppZB8Do.png",
     "yearSeason": "2010 春",
     "genres": [
       "喜劇"
@@ -37593,8 +37787,8 @@
   },
   {
     "id": "anilist-6772",
-    "titleZh": "破刃之劍 第一章 覺醒之刻",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/a0/81/5498_rR8o3.jpg",
+    "titleZh": "ブレイク ブレイド 覚醒ノ刻",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6772-rZOOo5n3QZ7u.jpg",
     "yearSeason": "2010 春",
     "genres": [
       "動作",
@@ -37628,7 +37822,7 @@
   {
     "id": "anilist-7661",
     "titleZh": "逆轉監督",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/11/92/4020_Kj402.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/7661.jpg",
     "yearSeason": "2010 春",
     "genres": [
       "劇情",
@@ -37638,7 +37832,7 @@
   {
     "id": "anilist-6864",
     "titleZh": "×××HOLiC 籠",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/45/ea/11598_8CN89.jpg",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6864-tbc8T8lbYY69.png",
     "yearSeason": "2010 春",
     "genres": [
       "懸疑",
@@ -37696,7 +37890,8 @@
     "yearSeason": "2010 春",
     "genres": [
       "動作",
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37722,8 +37917,8 @@
   },
   {
     "id": "anilist-4334",
-    "titleZh": "ヒーローマン",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4334-4wI880nqsC4I.png",
+    "titleZh": "我家的英雄",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/7d/8d/388067_5T0cH.jpg",
     "yearSeason": "2010 春",
     "genres": [
       "動作",
@@ -37766,7 +37961,8 @@
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/8302.jpg",
     "yearSeason": "2010 春",
     "genres": [
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37791,7 +37987,7 @@
   {
     "id": "anilist-5306",
     "titleZh": "仙樂傳說 迪賽雅蘭篇",
-    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx5306-FrQQ6rETpn9d.png",
+    "coverImage": "http://lain.bgm.tv/pic/cover/l/34/f9/4480_QJGhn.jpg",
     "yearSeason": "2010 春",
     "genres": [
       "動作",
@@ -37801,8 +37997,8 @@
   },
   {
     "id": "anilist-8190",
-    "titleZh": "交響情人夢 OAD",
-    "coverImage": "http://lain.bgm.tv/pic/cover/l/11/aa/10162_xPpa8.jpg",
+    "titleZh": "のだめカンタービレ OVA 2",
+    "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/8190.jpg",
     "yearSeason": "2010 春",
     "genres": [
       "喜劇",
@@ -37830,7 +38026,8 @@
       "冒險",
       "喜劇",
       "福利",
-      "奇幻"
+      "奇幻",
+      "紳士"
     ]
   },
   {
@@ -37848,7 +38045,8 @@
     "coverImage": "http://lain.bgm.tv/pic/cover/l/69/50/3479_WG3cc.jpg",
     "yearSeason": "2010 春",
     "genres": [
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
@@ -37868,7 +38066,8 @@
     "coverImage": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/8619.jpg",
     "yearSeason": "2010 春",
     "genres": [
-      "福利"
+      "福利",
+      "紳士"
     ]
   },
   {
