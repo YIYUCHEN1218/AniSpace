@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FilterBar.css';
-import { Search, SlidersHorizontal, ArrowDownAZ, AlertTriangle, Plus } from 'lucide-react';
+import { Search, SlidersHorizontal, ArrowDownAZ, Plus } from 'lucide-react';
 import { getRelativeSeasonString } from '../utils/season';
 import AddAnimeModal from './AddAnimeModal';
 
@@ -12,6 +12,9 @@ interface FilterBarProps {
   searchQuery: string;
   sortBy: string;
   onSortChange: (sort: string) => void;
+  onYearChange: (year: string) => void;
+  onGenreChange: (genres: string[]) => void;
+  onSearchChange: (search: string) => void;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
@@ -82,7 +85,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             >
               <option value="">所有年份</option>
               {(() => {
-                const elements: JSX.Element[] = [];
+                const elements: React.JSX.Element[] = [];
                 let currentYear = '';
                 years.forEach((ys, index) => {
                   const y = ys.match(/\d+/)?.[0] || '';

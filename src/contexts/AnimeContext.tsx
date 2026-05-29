@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import type { Anime, WatchedAnime } from '../types';
 import { LOCAL_STORAGE_KEY, PLAN_TO_WATCH_KEY, CACHED_DATA_KEY } from '../utils/constants';
-import { parseSeason, getSeasonInfo } from '../utils/season';
+
 import { useTitleCorrections } from '../hooks/useTitleCorrections';
 
 const REMOTE_DB_URL = import.meta.env.DEV 
@@ -33,7 +33,7 @@ export const AnimeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [isScraping, setIsScraping] = useState<boolean>(false);
   const [scrapeProgress, setScrapeProgress] = useState<string>('');
   
-  const autoScrapeChecked = useRef(false);
+
   const { setCorrection, getCorrectedTitle } = useTitleCorrections();
 
   useEffect(() => {
