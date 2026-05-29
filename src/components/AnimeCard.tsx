@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './AnimeCard.css';
 import type { Anime, WatchedAnime } from '../types';
-import { Star, Heart, Edit2, Check, X } from 'lucide-react';
+import { Star, Heart, Edit2, Check, X, Trash2 } from 'lucide-react';
 import { useAnime } from '../contexts/AnimeContext';
 
 interface AnimeCardProps {
@@ -26,9 +26,11 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
   onActionClick,
   onPlanToWatchToggle,
 }) => {
-  const { setCorrection, getCorrectedTitle } = useAnime();
+  const { setCorrection, getCorrectedTitle, handleRemoveReview } = useAnime();
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [newTitle, setNewTitle] = useState('');
+  const [isConfirmingRemove, setIsConfirmingRemove] = useState(false);
+  const [skipConfirm, setSkipConfirm] = useState(false);
   const [popoverPos, setPopoverPos] = useState<PopoverPos>({ top: 0, left: 0, width: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -57,6 +59,33 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
     setIsEditingTitle(true);
   };
 
+  const onRemoveReviewClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const shouldSkip = sessionStorage.getItem('skip_remove_review_confirm') === 'true';
+    if (shouldSkip) {
+      handleRemoveReview(anime.id);
+    } else {
+      if (cardRef.current) {
+        const rect = cardRef.current.getBoundingClientRect();
+        const popupWidth = Math.max(rect.width * 1.365, 315);
+        setPopoverPos({
+          top: rect.top + rect.height * 0.28,
+          left: rect.left + rect.width / 2 - popupWidth / 2,
+          width: popupWidth,
+        });
+      }
+      setIsConfirmingRemove(true);
+    }
+  };
+
+  const handleConfirmRemove = () => {
+    if (skipConfirm) {
+      sessionStorage.setItem('skip_remove_review_confirm', 'true');
+    }
+    handleRemoveReview(anime.id);
+    setIsConfirmingRemove(false);
+  };
+
   const handleCancel = () => setIsEditingTitle(false);
 
   return (
@@ -69,6 +98,17 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
       >
         <Edit2 size={14} />
       </button>
+
+      {/* Remove review — Top Left (Next to Edit) */}
+      {isWatched && (
+        <button
+          className="remove-review-btn"
+          onClick={onRemoveReviewClick}
+          title="移除評價"
+        >
+          <Trash2 size={14} />
+        </button>
+      )}
 
       {/* Plan-to-watch — Top Right */}
       <button
@@ -154,6 +194,44 @@ const AnimeCard: React.FC<AnimeCardProps> = ({
                 </button>
               </div>
             </form>
+          </div>
+        </>,
+        document.body,
+      )}
+
+      {/* Confirm Remove popup */}
+      {isConfirmingRemove && createPortal(
+        <>
+          <div className="card-edit-backdrop" onClick={() => setIsConfirmingRemove(false)} />
+          <div
+            className="card-edit-popup"
+            style={{ top: popoverPos.top, left: popoverPos.left, width: popoverPos.width }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="card-edit-popup-label" style={{ color: '#f87171' }}>確認移除評價？</div>
+            <hr style={{ borderColor: 'rgba(255,255,255,0.1)', margin: '4px 0 10px' }} />
+            <div style={{ marginBottom: '12px', fontSize: '0.85rem', color: '#e2e8f0' }}>
+              此操作將從您的動畫紀錄中移除此項目。
+            </div>
+            
+            <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: '#e2e8f0', cursor: 'pointer', marginBottom: '12px' }}>
+              <input 
+                type="checkbox" 
+                checked={skipConfirm}
+                onChange={e => setSkipConfirm(e.target.checked)}
+                style={{ cursor: 'pointer' }}
+              />
+              不用再次確認
+            </label>
+
+            <div className="card-edit-popup-actions">
+              <button type="button" className="card-edit-popup-btn cancel" onClick={() => setIsConfirmingRemove(false)} title="取消">
+                <X size={15} />
+              </button>
+              <button type="button" className="card-edit-popup-btn save" onClick={handleConfirmRemove} title="確定移除" style={{ color: '#f87171' }}>
+                <Check size={15} />
+              </button>
+            </div>
           </div>
         </>,
         document.body,
