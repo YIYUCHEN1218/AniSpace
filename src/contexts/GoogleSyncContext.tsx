@@ -28,7 +28,15 @@ export const GoogleSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
   const [isSyncing, setIsSyncing] = useState(false);
   const [lastSyncTime, setLastSyncTime] = useState<string | null>(localStorage.getItem('google_last_sync'));
   
-  const { watchedList, planToWatchList, handleImport } = useAnime();
+  const { 
+    watchedList, 
+    planToWatchList, 
+    customAnimeList,
+    corrections,
+    handleImport,
+    handleImportCustomAnime,
+    handleImportCorrections
+  } = useAnime();
 
   const isLoggedIn = !!accessToken;
 
@@ -78,7 +86,12 @@ export const GoogleSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
       let fileId = await findBackupFile(accessToken);
 
       // 準備要上傳的資料
-      const backupData = JSON.stringify({ watchedList, planToWatchList });
+      const backupData = JSON.stringify({ 
+        watchedList, 
+        planToWatchList,
+        customAnimeList,
+        corrections
+      });
 
       if (!fileId) {
         // 檔案不存在，先建立 Metadata
@@ -152,8 +165,18 @@ export const GoogleSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
       if (res.ok) {
         const data = await res.json();
-        if (data.watchedList && window.confirm(`在雲端找到了備份資料 (包含 ${data.watchedList.length} 筆已觀看)，是否要與本地資料合併/覆蓋？`)) {
-           handleImport(data.watchedList);
+        
+        let confirmMsg = `在雲端找到了備份資料：\n`;
+        if (data.watchedList) confirmMsg += `- ${data.watchedList.length} 筆已觀看\n`;
+        if (data.customAnimeList) confirmMsg += `- ${data.customAnimeList.length} 筆自訂動畫\n`;
+        if (data.corrections) confirmMsg += `- ${Object.keys(data.corrections).length} 筆名稱修改\n`;
+        confirmMsg += `\n是否要與本地資料合併/覆蓋？`;
+
+        if ((data.watchedList || data.customAnimeList || data.corrections) && window.confirm(confirmMsg)) {
+           if (data.watchedList) handleImport(data.watchedList);
+           if (data.customAnimeList) handleImportCustomAnime(data.customAnimeList);
+           if (data.corrections) handleImportCorrections(data.corrections);
+           
            alert('資料還原完成！');
            updateSyncTime();
         }

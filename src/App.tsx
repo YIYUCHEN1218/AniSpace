@@ -10,8 +10,6 @@ import { useAnime } from './contexts/AnimeContext';
 
 function App() {
   const {
-    watchedList,
-    handleImport,
     handleSync,
     isScraping,
     scrapeProgress
@@ -65,10 +63,7 @@ function App() {
                 {isScraping ? <Loader2 className="animate-spin" size={16} /> : <DownloadCloud size={16} />}
                 {isScraping ? scrapeProgress : '同步最新動漫'}
               </button>
-              <ImportExportButtons
-                watchedData={watchedList}
-                onImport={handleImport}
-              />
+              <ImportExportButtons />
             </div>
           </div>
       </header>

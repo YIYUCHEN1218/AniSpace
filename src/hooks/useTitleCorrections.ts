@@ -24,5 +24,12 @@ export function useTitleCorrections() {
     return corrections[original] || original;
   };
 
-  return { corrections, setCorrection, getCorrectedTitle };
+  const handleImportCorrections = (importedCorrections: TitleCorrections) => {
+    setCorrections(prev => ({
+      ...importedCorrections,
+      ...prev
+    }));
+  };
+
+  return { corrections, setCorrection, getCorrectedTitle, handleImportCorrections };
 }
